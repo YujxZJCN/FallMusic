@@ -51,6 +51,7 @@ class ARViewModel: ObservableObject {
         arView.addGestureRecognizer(gestureRecognizer)
         
         // Anchor for a horizontal plane for minimum 40cm * 40cm
+        
         let anchor = AnchorEntity(plane: .horizontal, minimumBounds: [0.4, 0.4])
         arView.scene.addAnchor(anchor)
         

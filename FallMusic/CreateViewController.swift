@@ -11,11 +11,14 @@ import SwiftUI
 var TABBARHIDDEN = false
 
 class CreateViewController: UIViewController {
-    
-    @IBSegueAction func showContentView(_ coder: NSCoder) -> UIViewController? {
-        let contentView = ContentView()
-        return UIHostingController(coder: coder, rootView: contentView)
+    @IBAction func startButtonTapped(_ sender: UIButton) {
+        
     }
+    
+//    @IBSegueAction func showContentView(_ coder: NSCoder) -> UIViewController? {
+//        let contentView = ContentView()
+//        return UIHostingController(coder: coder, rootView: contentView)
+//    }
     
     @IBAction func menuButtonTapped(_ sender: UIButton) {
         UIView.animate(withDuration: 0.4, animations: {

@@ -1,0 +1,32 @@
+PODS:
+  - Alamofire (4.9.1)
+  - SwiftAudioPlayer (2.11.0)
+  - SwiftyJSON (4.3.0)
+  - TinyConstraints (4.0.1)
+  - VersaPlayer (3.0.2)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.7)
+  - SwiftAudioPlayer
+  - SwiftyJSON (~> 4.0)
+  - TinyConstraints
+  - VersaPlayer
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - SwiftAudioPlayer
+    - SwiftyJSON
+    - TinyConstraints
+    - VersaPlayer
+
+SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  SwiftAudioPlayer: c92ea19b45ef2309d790f34970cbe5b0b49444a1
+  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
+  TinyConstraints: 8dd91295e56797648c7bc335dd20e1d91ec4c192
+  VersaPlayer: 0e9a0ea7da786729ffb377dbd17b34641a8265e4
+
+PODFILE CHECKSUM: c34a318b51416e874c607f57ea4507df750025d2
+
+COCOAPODS: 1.11.2

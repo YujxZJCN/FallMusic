@@ -10,9 +10,14 @@ import SwiftUI
 import ARKit
 import RealityKit
 import Combine
+import SCNRecorder
 
 var sceneObserver: Cancellable!
 let SHOW_AR_DEBUG = false
+
+var playerLooper: AVPlayerLooper!
+var queuePlayer: AVQueuePlayer!
+var playerCurrentProgress: CMTime
 
 let allModels = [
     "Plant": ["Plant_F_01", "Plant_F_02", "Plant_F_03"],
@@ -26,7 +31,7 @@ class AREntity: Entity, HasCollision, HasModel {
         super.init()
 //        self.model = ModelComponent(mesh: .generateBox(size: [1,0.2,1]), materials: [SimpleMaterial(color: .lightGray, roughness: 1.0, isMetallic: true)])
         let loadModel = try!ModelEntity.load(named: "Plant_F_02.usdz")
-        self.model = loadModel.components[ModelComponent]
+        self.model = loadModel.components[ModelComponent.self]
         self.generateCollisionShapes(recursive: true)
         self.scale = [0.1, 0.1, 0.1]
     }
@@ -151,11 +156,11 @@ class ARViewModel: ObservableObject {
 //                usdzEntity?.components.set(physics)
 //                model.children[0].components.set(motion)
                 
-                if let collisionComponent = model.components[CollisionComponent] as? CollisionComponent {
-                    print("has collision component \(collisionComponent.shapes)")
-                    model.components[PhysicsBodyComponent] = PhysicsBodyComponent(shapes: collisionComponent.shapes, mass: 1, material: nil, mode: .dynamic)
-                    model.components[PhysicsMotionComponent] = PhysicsMotionComponent(linearVelocity: [0, 5, 0], angularVelocity: [0, 5, 0])
-                }
+//                if let collisionComponent = model.components[CollisionComponent.self] as? CollisionComponent {
+//                    print("has collision component \(collisionComponent.shapes)")
+//                    model.components[PhysicsBodyComponent.self] = PhysicsBodyComponent(shapes: collisionComponent.shapes, mass: 1, material: nil, mode: .dynamic)
+//                    model.components[PhysicsMotionComponent.self] = PhysicsMotionComponent(linearVelocity: [0, 5, 0], angularVelocity: [0, 5, 0])
+//                }
                 
                 let anchorEntity = AnchorEntity(world: result.worldTransform)
                 anchorEntity.addChild(modelEntity)
@@ -213,6 +218,22 @@ struct ARViewContainer: UIViewRepresentable {
         arViewModel.arView.scene.addAnchor(bodySkeletonAnchor)
         sceneObserver = arViewModel.arView.scene.subscribe(to: SceneEvents.Update.self) {
             _ in self.updateScene()
+        }
+
+        // MARK: Play BGM
+        let playerItem = AVPlayerItem(URL: desURL)
+        queuePlayer = AVQueuePlayer(playerItem: playerItem)
+        // Create a new player looper with the queue player and template item
+        playerLooper = AVPlayerLooper(player: queuePlayer, templateItem: playerItem)
+        queuePlayer.play()
+
+        // Notify every half second
+        let timeScale = CMTimeScale(NSEC_PER_SEC)
+        let time = CMTime(seconds: 0.5, preferredTimescale: timeScale)
+        queuePlayer.addPeriodicTimeObserver(forInterval: time, queue: .main) {
+            [weak self] time in
+            // update player transport UI
+            playerCurrentProgress = time
         }
         
         return arViewModel.arView

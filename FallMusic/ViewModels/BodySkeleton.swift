@@ -11,6 +11,7 @@ import RealityKit
 
 public var bodySkeleton: BodySkeleton?
 public var bodySkeletonAnchor = AnchorEntity()
+public var peakSet: Set<Float> = Set<Float>()
 
 public struct EffectEntity {
     var anchor: AnchorEntity
@@ -42,14 +43,29 @@ public struct JointInfo {
             let currentAcceleration = (currentVelocity - velocity) / Float(timeStamp - lastTimeStamp)
             
             if accleration < -0.1 && abs(currentAcceleration) < 0.001 {
-                // Trigger Effect
-                return true
+                // get Audio Progress and Peak from global
+                if isOnBeat() {
+                    // Trigger Effect
+                    return true
+                } else {
+                    return false
+                }
             }
             accleration = currentAcceleration
             velocity = currentVelocity
         }
         lastTimeStamp = timeStamp
         lastPosition = position
+        return false
+    }
+    
+    func isOnBeat() -> Bool {
+        let currentSeconds = Float(CMTimeGetSeconds(playerCurrentProgress))
+        for p in peakSet {
+            if abs(currentSeconds - p) < 0.5 {
+                return true
+            }
+        }
         return false
     }
 }
@@ -66,6 +82,13 @@ public class BodySkeleton: Entity {
         super.init()
         
 //        audioViewModel.playOrPause()
+        
+        // MARK: Initialize Set
+        peakSet.removeAll()
+        for i in peaks {
+            peakSet.insert(i.position)
+        }
+        
         
         // MARK: Traverse Joints
         // create entity for each joint in skeleton
@@ -189,9 +212,9 @@ public class BodySkeleton: Entity {
         model.setScale([0.001, 0.001, 0.001], relativeTo: .none)
         modelEntity.generateCollisionShapes(recursive: true)
         
-        if let collisionComponent = model.components[CollisionComponent] as? CollisionComponent {
-            model.components[PhysicsBodyComponent] = PhysicsBodyComponent(shapes: collisionComponent.shapes, mass: 0.1, material: nil, mode: .dynamic)
-            model.components[PhysicsMotionComponent] = PhysicsMotionComponent(linearVelocity: linearVelocity, angularVelocity: angularVelocity)
+        if let collisionComponent = model.components[CollisionComponent.self] as? CollisionComponent {
+            model.components[PhysicsBodyComponent.self] = PhysicsBodyComponent(shapes: collisionComponent.shapes, mass: 0.1, material: nil, mode: .dynamic)
+            model.components[PhysicsMotionComponent.self] = PhysicsMotionComponent(linearVelocity: linearVelocity, angularVelocity: angularVelocity)
         }
         
         return modelEntity
@@ -205,9 +228,9 @@ public class BodySkeleton: Entity {
         model.setScale([0.001, 0.001, 0.001], relativeTo: .none)
         modelEntity.generateCollisionShapes(recursive: true)
         
-        if let collisionComponent = model.components[CollisionComponent] as? CollisionComponent {
-            model.components[PhysicsBodyComponent] = PhysicsBodyComponent(shapes: collisionComponent.shapes, mass: 0.1, material: nil, mode: .kinematic)
-            model.components[PhysicsMotionComponent] = PhysicsMotionComponent(linearVelocity: linearVelocity, angularVelocity: angularVelocity)
+        if let collisionComponent = model.components[CollisionComponent.self] as? CollisionComponent {
+            model.components[PhysicsBodyComponent.self] = PhysicsBodyComponent(shapes: collisionComponent.shapes, mass: 0.1, material: nil, mode: .kinematic)
+            model.components[PhysicsMotionComponent.self] = PhysicsMotionComponent(linearVelocity: linearVelocity, angularVelocity: angularVelocity)
         }
         
         return modelEntity

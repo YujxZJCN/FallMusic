@@ -23,7 +23,15 @@ struct SelectorView: View {
                         self.isPlacementEnable = true
                         self.confirmedModel = self.modelNames[index]
                     }, label: {
-                        Text(self.modelNames[index])
+                        VStack(){
+                            Image("\(self.modelNames[index])_pic")
+                                .resizable()
+                                .scaledToFill()
+                                .frame(width: 120, height: 120, alignment: .center)
+                                .clipped()
+                            Text(self.modelNames[index])
+                            
+                        }
                     })
                 }
             }

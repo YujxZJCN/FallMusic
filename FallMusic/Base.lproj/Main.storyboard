@@ -1142,52 +1142,11 @@
                         <outletCollection property="styleButtons" destination="EAJ-3i-eCf" collectionClass="NSMutableArray" id="lKo-Ct-IwO"/>
                         <outletCollection property="styleButtons" destination="dGi-JR-Qr6" collectionClass="NSMutableArray" id="TJ9-Z8-SGD"/>
                         <outletCollection property="styleButtons" destination="gzd-E8-qKX" collectionClass="NSMutableArray" id="AHm-9N-ehI"/>
-                        <segue destination="4RP-bX-cmZ" kind="presentation" identifier="demoShow" id="HMg-3P-z9W"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3fQ-9f-GPf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2228.985507246377" y="118.52678571428571"/>
-        </scene>
-        <!--Demo View Controller-->
-        <scene sceneID="8iQ-Ro-ruO">
-            <objects>
-                <viewController id="4RP-bX-cmZ" customClass="DemoViewController" customModule="FallMusic" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Fcz-XN-ba5">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7W-ld-cTs">
-                                <rect key="frame" x="186" y="166" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hfn-AL-a1i">
-                                <rect key="frame" x="186" y="247" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="YSo-i1-JCr"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="Hfn-AL-a1i" firstAttribute="top" secondItem="h7W-ld-cTs" secondAttribute="bottom" constant="60" id="BZk-N9-pkR"/>
-                            <constraint firstItem="h7W-ld-cTs" firstAttribute="top" secondItem="YSo-i1-JCr" secondAttribute="top" constant="166" id="Frq-XW-hbi"/>
-                            <constraint firstItem="Hfn-AL-a1i" firstAttribute="centerX" secondItem="Fcz-XN-ba5" secondAttribute="centerX" id="OA1-e6-c6q"/>
-                            <constraint firstItem="h7W-ld-cTs" firstAttribute="centerX" secondItem="Fcz-XN-ba5" secondAttribute="centerX" id="bUu-ZZ-hmA"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="bSu-kr-wId"/>
-                    <connections>
-                        <outlet property="desLabel" destination="h7W-ld-cTs" id="DyO-iy-1Er"/>
-                        <outlet property="peakLabel" destination="Hfn-AL-a1i" id="ekX-dq-S8I"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XT2-dd-Bsq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3753.6231884057975" y="118.52678571428571"/>
         </scene>
     </scenes>
     <resources>

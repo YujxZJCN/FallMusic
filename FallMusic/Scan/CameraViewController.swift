@@ -5,6 +5,7 @@ import CoreImage
 import Alamofire
 import SwiftyJSON
 import aubio
+import SwiftUI
 
 struct Peak {
     var position: Float
@@ -69,12 +70,40 @@ class CameraViewController: UIViewController {
     
     var musicReqTimer: Timer!
     
+    let styleDic = ["china" : 6,
+                    "country" : 20,
+                    "jazz" : 14,
+                    "pop" : 16
+                ]
+    
     func requestMusic(style: String) {
+        if musicReqTimer != nil {
+            musicReqTimer.invalidate()
+        }
         self.musicLists.removeAll()
         print(musicRecommandURL + style)
-        Alamofire.request(musicRecommandURL + style, method: .get).responseData { (response) in
-            self.musicReqTimer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(self.getMusicProcess), userInfo: nil, repeats: true)
-            self.musicReqTimer.fire()
+        
+        // Cloud
+//        Alamofire.request(musicRecommandURL + style, method: .get).responseData { (response) in
+//            self.musicReqTimer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(self.getMusicProcess), userInfo: nil, repeats: true)
+//            self.musicReqTimer.fire()
+//        }
+        
+        // Local
+        useLocalMusic(with: style)
+    }
+    
+    func useLocalMusic(with style: String) {
+        let totalNum = styleDic[style]!
+        let rndMusic = Int.random(in: 1...totalNum)
+        let path = Bundle.main.path(forResource: style + String(rndMusic), ofType: "mp3")
+        desURL = path!
+        peaks = self.getPeaks(file: path!)
+        DispatchQueue.main.async {
+            let contentView = ContentView()
+            let SwiftUIVC = UIHostingController(rootView: contentView)
+            SwiftUIVC.modalPresentationStyle = .fullScreen
+            self.present(SwiftUIVC, animated: true, completion: nil)
         }
     }
     
@@ -105,7 +134,12 @@ class CameraViewController: UIViewController {
                                         print(self.getPeaks(file: destinationUrl!.relativeString.replace(target: "file://", withString: "")))
                                         desURL = destinationUrl!.path
                                         peaks = self.getPeaks(file: destinationUrl!.relativeString.replace(target: "file://", withString: ""))
-                                        self.performSegue(withIdentifier: "demoShow", sender: self)
+                                        DispatchQueue.main.async {
+                                            let contentView = ContentView()
+                                            let SwiftUIVC = UIHostingController(rootView: contentView)
+                                            SwiftUIVC.modalPresentationStyle = .fullScreen
+                                            self.present(SwiftUIVC, animated: true, completion: nil)
+                                        }
                                     }
                                     
                                 }

@@ -17,7 +17,7 @@ class PlaygroundViewController: UIViewController {
     }
     
     @IBAction func menuButtonTapped(_ sender: UIButton) {
-        print(sender.tag)
+//        print(sender.tag)
         for btn in menuButtons {
             if btn.tag == sender.tag {
                 btn.titleLabel?.font = UIFont.systemFont(ofSize: 20, weight: .semibold)
@@ -77,7 +77,7 @@ extension PlaygroundViewController: PinterestLayoutDelegate {
         _ collectionView: UICollectionView,
         heightForPhotoAtIndexPath indexPath:IndexPath) -> CGFloat {
             let itemSize = (collectionView.frame.width - (collectionView.contentInset.left + collectionView.contentInset.right + 10)) / 2
-            print(itemSize)
+//            print(itemSize)
             return itemSize * UIImage(named: artPieces[indexPath.row].imageName)!.size.height / UIImage(named: artPieces[indexPath.row].imageName)!.size.width + 58.0
         }
 }

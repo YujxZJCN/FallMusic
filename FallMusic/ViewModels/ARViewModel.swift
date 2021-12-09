@@ -10,14 +10,13 @@ import SwiftUI
 import ARKit
 import RealityKit
 import Combine
-import SCNRecorder
 
 var sceneObserver: Cancellable!
 let SHOW_AR_DEBUG = false
 
 var playerLooper: AVPlayerLooper!
 var queuePlayer: AVQueuePlayer!
-var playerCurrentProgress: CMTime
+var playerCurrentProgress: CMTime!
 
 let allModels = [
     "Plant": ["Plant_F_01", "Plant_F_02", "Plant_F_03"],
@@ -114,7 +113,7 @@ class ARViewModel: ObservableObject {
             config.frameSemantics.insert(.sceneDepth)
         }
         
-        print(config.frameSemantics)
+//        print(config.frameSemantics)
         arView.session.run(config)
                 
         // MARK: Debug Options
@@ -221,7 +220,8 @@ struct ARViewContainer: UIViewRepresentable {
         }
 
         // MARK: Play BGM
-        let playerItem = AVPlayerItem(URL: desURL)
+        print("<DEBUG> AVPlayerItem url: \(desURL)")
+        let playerItem = AVPlayerItem(url: URL(string: desURL)!)
         queuePlayer = AVQueuePlayer(playerItem: playerItem)
         // Create a new player looper with the queue player and template item
         playerLooper = AVPlayerLooper(player: queuePlayer, templateItem: playerItem)
@@ -231,7 +231,7 @@ struct ARViewContainer: UIViewRepresentable {
         let timeScale = CMTimeScale(NSEC_PER_SEC)
         let time = CMTime(seconds: 0.5, preferredTimescale: timeScale)
         queuePlayer.addPeriodicTimeObserver(forInterval: time, queue: .main) {
-            [weak self] time in
+            time in
             // update player transport UI
             playerCurrentProgress = time
         }

@@ -19,7 +19,7 @@ struct SelectorView: View {
                 ForEach(0 ..< self.modelNames.count) {
                     index in
                     Button(action: {
-                        print("DEBUG: click model button \(self.modelNames[index])")
+//                        print("DEBUG: click model button \(self.modelNames[index])")
                         self.isPlacementEnable = true
                         self.confirmedModel = self.modelNames[index]
                     }, label: {

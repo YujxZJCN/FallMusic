@@ -13,7 +13,7 @@ import Foundation
 import AVFoundation
 import SwiftUI
 
-public var audioViewModel: AudioViewModel = AudioViewModel("song2", withExtension: "wav")
+//public var audioViewModel: AudioViewModel = AudioViewModel("song2", withExtension: "wav")
 
 public class AudioViewModel: NSObject, ObservableObject {
     

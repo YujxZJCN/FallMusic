@@ -71,7 +71,7 @@ class CameraViewController: UIViewController {
     var musicReqTimer: Timer!
     
     let styleDic = ["china" : 6,
-                    "country" : 20,
+                    "country" : 10,
                     "jazz" : 14,
                     "pop" : 16
                 ]
@@ -303,7 +303,7 @@ class CameraViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        timer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(timerEvent), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timerEvent), userInfo: nil, repeats: true)
     }
     
     @objc func timerEvent() {
@@ -418,7 +418,10 @@ extension PHAsset {
 extension CameraViewController: VideoUploadAndProcessDoneProtocol {
     func uploadAndProcessDone() {
         UIView.animate(withDuration: 0.5) {
-            self.musicStyleView.transform = .identity
+            DispatchQueue.main.async {
+                self.musicStyleView.transform = .identity
+            }
+            
         } completion: { completed in
             return
         }

@@ -14,9 +14,14 @@ import Combine
 var sceneObserver: Cancellable!
 let SHOW_AR_DEBUG = false
 
-var playerLooper: AVPlayerLooper!
-var queuePlayer: AVQueuePlayer!
-var playerCurrentProgress: CMTime!
+var audioPlayer: AVAudioPlayer!
+var musicProgress = 0.0
+
+//var playerLooper: AVPlayerLooper!
+//var queuePlayer: AVQueuePlayer!
+//var playerCurrentProgress: CMTime!
+
+var audioViewModel: AudioViewModel = AudioViewModel("china1", withExtension: "mp3")
 
 let allModels = [
     "Plant": ["Plant_F_01", "Plant_F_02", "Plant_F_03"],
@@ -36,16 +41,18 @@ class AREntity: Entity, HasCollision, HasModel {
     }
 }
 
+var globalTimer: Timer!
+
 // MARK: ARViewModel
 class ARViewModel: ObservableObject {
     public var arView: ARView = ARView(frame: .zero)
-    private var boxEntity: Entity
+//    private var boxEntity: Entity
     private var currentModelName: String?
-    
+
     init() {
         // Load box Model Entity
-        let box = try! Experience.loadBox()
-        boxEntity = box.steelBox!
+//        let box = try! Experience.loadBox()
+//        boxEntity = box.steelBox!
         
         setupCoachingOverlay()
         setupARViewConfigure()
@@ -56,11 +63,19 @@ class ARViewModel: ObservableObject {
         
         // Anchor for a horizontal plane for minimum 40cm * 40cm
         
-        let anchor = AnchorEntity(plane: .horizontal, minimumBounds: [0.4, 0.4])
+        let anchor = AnchorEntity(plane: .horizontal, minimumBounds: [2.0, 2.0])
         arView.scene.addAnchor(anchor)
         
         // Setup basic scene
         setupScene(anchor)
+        
+        globalTimer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+        audioPlayer = try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: desURL))
+        audioPlayer.prepareToPlay()
+    }
+    
+    @objc func updateTimer() {
+        musicProgress += 0.1
     }
     
     // MARK: Private Functions
@@ -92,14 +107,16 @@ class ARViewModel: ObservableObject {
         if ARWorldTrackingConfiguration.supportsSceneReconstruction(.meshWithClassification) {
             config.sceneReconstruction = .meshWithClassification
             print("<ARWorldTrackingConfiguration> meshWithClassification")
-        } else if ARWorldTrackingConfiguration.supportsSceneReconstruction(.mesh) {
+        }
+        if ARWorldTrackingConfiguration.supportsSceneReconstruction(.mesh) {
             config.sceneReconstruction = .mesh
             print("<ARWorldTrackingConfiguration> mesh")
         }
         if ARWorldTrackingConfiguration.supportsFrameSemantics(.personSegmentationWithDepth) {
             config.frameSemantics.insert(.personSegmentationWithDepth)
             print("<ARWorldTrackingConfiguration> personSegmentationWithDepth")
-        } else if ARWorldTrackingConfiguration.supportsFrameSemantics(.personSegmentation) {
+        }
+        if ARWorldTrackingConfiguration.supportsFrameSemantics(.personSegmentation) {
             config.frameSemantics.insert(.personSegmentation)
             print("<ARWorldTrackingConfiguration> personSegmentation")
         }
@@ -109,11 +126,12 @@ class ARViewModel: ObservableObject {
 //        }
         if ARWorldTrackingConfiguration.supportsFrameSemantics(.smoothedSceneDepth) {
             config.frameSemantics.insert(.smoothedSceneDepth)
-        } else if ARWorldTrackingConfiguration.supportsFrameSemantics(.sceneDepth) {
+        }
+        if ARWorldTrackingConfiguration.supportsFrameSemantics(.sceneDepth) {
             config.frameSemantics.insert(.sceneDepth)
         }
         
-//        print(config.frameSemantics)
+        print(config.frameSemantics)
         arView.session.run(config)
                 
         // MARK: Debug Options
@@ -132,14 +150,14 @@ class ARViewModel: ObservableObject {
     @objc func tapped(gesture: UITapGestureRecognizer) {
         // Get Hit Position
         let point = gesture.location(in: arView)
-        print("DEBUG: Guesture Point Hit: \(point)")
+//        print("DEBUG: Guesture Point Hit: \(point)")
         
         let results = arView.raycast(from: point, allowing: .estimatedPlane, alignment: .any)
         if let result = results.first {
-            print("DEBUG: Raycast results[0]: \(result.worldTransform)")
+//            print("DEBUG: Raycast results[0]: \(result.worldTransform)")
             if (currentModelName != nil) {
                 let filename = allModels[currentModelName!]![Int.random(in: 0...2)] + ".usdz"
-                print("DEBUG: load filename \(filename)")
+//                print("DEBUG: load filename \(filename)")
                 
                 let loadedModel = try!ModelEntity.load(named: filename)
                 let model = loadedModel.children[0].children[0]
@@ -168,9 +186,9 @@ class ARViewModel: ObservableObject {
                 // Install Gesture for modelEntity
                 arView.installGestures(.all, for: modelEntity)
                 
-                print("modelPhysicsEntity is Active: \(modelEntity.isActive)")
-                print("modelEntity.components: \(modelEntity.components)")
-                print("model.components: \(model.components)")
+//                print("modelPhysicsEntity is Active: \(modelEntity.isActive)")
+//                print("modelEntity.components: \(modelEntity.components)")
+//                print("model.components: \(model.components)")
                 
             }
         }
@@ -180,11 +198,11 @@ class ARViewModel: ObservableObject {
     
     private func setupScene(_ anchor: AnchorEntity) {
         // Attach Occlusion Box
-        let boxSize: Float = 1
+        let boxSize: Float = 50.0
         let boxMesh = MeshResource.generateBox(size: boxSize)
         let boxMaterial = OcclusionMaterial()
         let occlusionBox = ModelEntity(mesh: boxMesh, materials: [boxMaterial])
-        occlusionBox.position = [0, -0.5, 0]
+        occlusionBox.position = [0, -25.0, 0]
         anchor.addChild(occlusionBox)
     }
     
@@ -202,6 +220,7 @@ class ARViewModel: ObservableObject {
 // MARK: ARViewContainer
 struct ARViewContainer: UIViewRepresentable {
     
+    
     public let arViewModel: ARViewModel
     @Binding var confirmModel: String?
     @Binding var clearCurrentModel: Bool
@@ -212,7 +231,6 @@ struct ARViewContainer: UIViewRepresentable {
     func makeUIView(context: Context) -> ARView {
 //        MARK: Body Tracking
 //        Uncomment the floowing codes to enable body tracking function
-        
         arViewModel.arView.setupForBodyTracking()
         arViewModel.arView.scene.addAnchor(bodySkeletonAnchor)
         sceneObserver = arViewModel.arView.scene.subscribe(to: SceneEvents.Update.self) {
@@ -221,34 +239,39 @@ struct ARViewContainer: UIViewRepresentable {
 
         // MARK: Play BGM
         print("<DEBUG> AVPlayerItem url: \(desURL)")
-        let playerItem = AVPlayerItem(url: URL(string: desURL)!)
-        queuePlayer = AVQueuePlayer(playerItem: playerItem)
+//        let name = desURL.components(separatedBy: "/").last!.components(separatedBy: ".mp3")[0]
+//        print("<DEBUG> Audio Name: \(name)")
+//        audioViewModel = AudioViewModel(name, withExtension: "mp3")
+//        audioViewModel.playOrPause()
+        
+//        let playerItem = AVPlayerItem(url: URL(string: desURL)!)
+//        queuePlayer = AVQueuePlayer(playerItem: playerItem)
         // Create a new player looper with the queue player and template item
-        playerLooper = AVPlayerLooper(player: queuePlayer, templateItem: playerItem)
-        queuePlayer.play()
+//        playerLooper = AVPlayerLooper(player: queuePlayer, templateItem: playerItem)
+//        queuePlayer.play()
 
         // Notify every half second
-        let timeScale = CMTimeScale(NSEC_PER_SEC)
-        let time = CMTime(seconds: 0.5, preferredTimescale: timeScale)
-        queuePlayer.addPeriodicTimeObserver(forInterval: time, queue: .main) {
-            time in
-            // update player transport UI
-            playerCurrentProgress = time
-        }
+//        let timeScale = CMTimeScale(NSEC_PER_SEC)
+//        let time = CMTime(seconds: 0.5, preferredTimescale: timeScale)
+//        queuePlayer.addPeriodicTimeObserver(forInterval: time, queue: .main) {
+//            time in
+//             update player transport UI
+//            playerCurrentProgress = time
+//        }
         
         return arViewModel.arView
     }
     
     func updateUIView(_ uiView: ARView, context: Context) {
         if let modelName = self.confirmModel {
-            print("DEBUG: modelName \(modelName)")
+//            print("DEBUG: modelName \(modelName)")
             arViewModel.setCurrentModel(modelName)
 //            DispatchQueue.main.async {
 //                self.confirmModel = nil
 //            }
         }
         if clearCurrentModel {
-            print("DEBUG: Clear Current Model")
+//            print("DEBUG: Clear Current Model")
             DispatchQueue.main.async {
                 self.clearCurrentModel = false
             }

@@ -307,7 +307,9 @@ class CameraManager: NSObject {
                         print(video)
                         
                         file_name = UUID.init().uuidString
-                        self.uploadVideo(withFileURL: video)
+                        
+                        self.delegate?.uploadAndProcessDone()
+//                        self.uploadVideo(withFileURL: video)
                         
                         PHAssetChangeRequest.creationRequestForAssetFromVideo(atFileURL: video)
                     }, completionHandler: { (success, error) in

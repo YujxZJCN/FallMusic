@@ -17,7 +17,7 @@ struct PlacementButtonView: View {
         HStack {
             // cancel button
             Button(action: {
-                print("DEBUG: click placement button")
+//                print("DEBUG: click placement button")
                 self.isPlacementEnable = false
                 self.selectedModel = nil
                 self.clearCurrentModel = true
@@ -32,7 +32,7 @@ struct PlacementButtonView: View {
             })
             // confirm button
             Button(action: {
-                print("DEBUG: click placement button")
+//                print("DEBUG: click placement button")
                 self.isPlacementEnable = false
                 // self.confirmedModel = self.selectedModel
                 self.selectedModel = nil

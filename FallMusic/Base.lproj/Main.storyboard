@@ -991,7 +991,7 @@
                                                                 </connections>
                                                             </button>
                                                         </subviews>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="trailing" secondItem="qBZ-vK-DJ9" secondAttribute="trailing" id="1DF-AG-IoL"/>
                                                             <constraint firstAttribute="bottom" secondItem="qBZ-vK-DJ9" secondAttribute="bottom" id="1uM-6M-6Ru"/>
@@ -1022,7 +1022,7 @@
                                                                 </connections>
                                                             </button>
                                                         </subviews>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="bottom" secondItem="EAJ-3i-eCf" secondAttribute="bottom" id="8ik-37-uCf"/>
                                                             <constraint firstAttribute="width" secondItem="nJb-gi-Pgw" secondAttribute="height" multiplier="1:1" id="ADW-AK-1CE"/>
@@ -1047,13 +1047,15 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dGi-JR-Qr6">
                                                                 <rect key="frame" x="0.0" y="0.0" width="77" height="77"/>
-                                                                <state key="normal" image="rock"/>
+                                                                <state key="normal" image="rock">
+                                                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
                                                                 <connections>
                                                                     <action selector="chinaButtonTapped:" destination="EDv-n1-Kwg" eventType="touchUpInside" id="ggj-Y4-Mv5"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="DDc-ps-itc" secondAttribute="height" multiplier="1:1" id="71B-nQ-dU1"/>
                                                             <constraint firstAttribute="trailing" secondItem="dGi-JR-Qr6" secondAttribute="trailing" id="UN3-px-Xhb"/>
@@ -1084,7 +1086,7 @@
                                                                 </connections>
                                                             </button>
                                                         </subviews>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="trailing" secondItem="gzd-E8-qKX" secondAttribute="trailing" id="4kh-LO-CFI"/>
                                                             <constraint firstItem="gzd-E8-qKX" firstAttribute="leading" secondItem="qHM-zh-gH0" secondAttribute="leading" id="8dk-5O-gok"/>

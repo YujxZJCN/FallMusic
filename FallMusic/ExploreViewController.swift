@@ -7,6 +7,7 @@
 
 import UIKit
 import SwiftUI
+import AVKit
 
 class ExploreViewController: UIViewController {
     
@@ -68,6 +69,33 @@ extension ExploreViewController: UICollectionViewDelegate,  UICollectionViewData
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let itemSize = (collectionView.frame.width - (collectionView.contentInset.left + collectionView.contentInset.right + 10)) / 2
         return CGSize(width: itemSize, height: itemSize)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        let vc = self.storyboard?.instantiateViewController(withIdentifier: "ShowVC") as! ShowViewController
+//        vc.modalPresentationStyle = .fullScreen
+//        self.present(vc, animated: true, completion: nil)
+        if indexPath.row % 2 == 0 {
+            playVideo(with: "show1")
+        } else {
+            playVideo(with: "show2")
+        }
+        
+    }
+    
+    private func playVideo(with name: String) {
+        try! AVAudioSession.sharedInstance().setCategory(.playback, options: [])
+        guard let path = Bundle.main.path(forResource: name, ofType:"mp4") else {
+            debugPrint("show1.mp4 not found")
+            return
+        }
+        let player = AVPlayer(url: URL(fileURLWithPath: path))
+        let playerController = AVPlayerViewController()
+        playerController.player = player
+        present(playerController, animated: true) {
+            player.play()
+        }
+        
     }
 }
 

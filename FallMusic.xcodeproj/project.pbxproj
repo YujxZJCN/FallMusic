@@ -141,6 +141,9 @@
 		F6622AC12725770F00F587D5 /* SelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6622ABE2725770E00F587D5 /* SelectorView.swift */; };
 		F6622AC22725770F00F587D5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6622ABF2725770E00F587D5 /* ContentView.swift */; };
 		F6622AC4272577A100F587D5 /* ChildHostingControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6622AC3272577A100F587D5 /* ChildHostingControllerViewController.swift */; };
+		F6926DB527650F2B0031574C /* ShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6926DB427650F2B0031574C /* ShowViewController.swift */; };
+		F6926DB727650F5C0031574C /* show1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F6926DB627650F5C0031574C /* show1.mp4 */; };
+		F6926DB92765138B0031574C /* show2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F6926DB82765138B0031574C /* show2.mp4 */; };
 		F695F67A270F3BF100122C6B /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F695F679270F3BF100122C6B /* ExploreViewController.swift */; };
 		F6BD5B5C2761C98800C2B604 /* pop12.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F6BD5B2B2761C98400C2B604 /* pop12.mp3 */; };
 		F6BD5B5D2761C98800C2B604 /* pop7.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F6BD5B2C2761C98400C2B604 /* pop7.mp3 */; };
@@ -331,6 +334,9 @@
 		F6622ABE2725770E00F587D5 /* SelectorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectorView.swift; sourceTree = "<group>"; };
 		F6622ABF2725770E00F587D5 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F6622AC3272577A100F587D5 /* ChildHostingControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildHostingControllerViewController.swift; sourceTree = "<group>"; };
+		F6926DB427650F2B0031574C /* ShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowViewController.swift; sourceTree = "<group>"; };
+		F6926DB627650F5C0031574C /* show1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = show1.mp4; sourceTree = "<group>"; };
+		F6926DB82765138B0031574C /* show2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = show2.mp4; sourceTree = "<group>"; };
 		F695F679270F3BF100122C6B /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		F6BD5B2B2761C98400C2B604 /* pop12.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pop12.mp3; sourceTree = "<group>"; };
 		F6BD5B2C2761C98400C2B604 /* pop7.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pop7.mp3; sourceTree = "<group>"; };
@@ -531,6 +537,8 @@
 		F608CA28270B37BD002B7FDA /* FallMusic */ = {
 			isa = PBXGroup;
 			children = (
+				F6926DB627650F5C0031574C /* show1.mp4 */,
+				F6926DB82765138B0031574C /* show2.mp4 */,
 				F62D07AE275BCB66007DA428 /* aubio.framework */,
 				F6622A8B272576A100F587D5 /* Resources */,
 				F6622AB0272576B200F587D5 /* ViewModels */,
@@ -547,6 +555,7 @@
 				F658809E270E9AC3009FABD9 /* DataSource.swift */,
 				F65880A0270E9ADF009FABD9 /* ArtPiece.swift */,
 				F65B85A5272475A8009F0732 /* PlaygroundPiece.swift */,
+				F6926DB427650F2B0031574C /* ShowViewController.swift */,
 				F608CA2F270B37BD002B7FDA /* Main.storyboard */,
 				F6622AC3272577A100F587D5 /* ChildHostingControllerViewController.swift */,
 				F6D7B402271043A300831E70 /* PinterestLayout.swift */,
@@ -884,6 +893,7 @@
 				F6BD5B892761C98800C2B604 /* country9.mp3 in Resources */,
 				F6BD5B602761C98800C2B604 /* pop11.mp3 in Resources */,
 				F6BD5B722761C98800C2B604 /* jazz10.mp3 in Resources */,
+				F6926DB92765138B0031574C /* show2.mp4 in Resources */,
 				4C30364727645F2800683B75 /* Items_Cash_03.usdz in Resources */,
 				4C30361027645F0400683B75 /* Octa-01-Yellow-Specular.usdz in Resources */,
 				F6622AA0272576A100F587D5 /* Flower_A_8.usdz in Resources */,
@@ -948,6 +958,7 @@
 				4C30361327645F0400683B75 /* Icosa-Yellow-Specular.usdz in Resources */,
 				4C30365327645F2800683B75 /* Items_SodaCan_03.usdz in Resources */,
 				4C3035FB27645F0400683B75 /* Octa-02-Blue-Specular.usdz in Resources */,
+				F6926DB727650F5C0031574C /* show1.mp4 in Resources */,
 				4C30360027645F0400683B75 /* Radiant-Peach-Specular.usdz in Resources */,
 				F6BD5B742761C98800C2B604 /* jazz13.mp3 in Resources */,
 				4C30360727645F0400683B75 /* Dodeca-Peach-Specular.usdz in Resources */,
@@ -1008,6 +1019,7 @@
 				F6622AC4272577A100F587D5 /* ChildHostingControllerViewController.swift in Sources */,
 				F6622AB4272576B200F587D5 /* BodySkeleton.swift in Sources */,
 				F6FC7E7F271E9DD800A01D7B /* ExploreCollectionViewCell.swift in Sources */,
+				F6926DB527650F2B0031574C /* ShowViewController.swift in Sources */,
 				F62D079E275B9580007DA428 /* CameraViewController.swift in Sources */,
 				F6622AC22725770F00F587D5 /* ContentView.swift in Sources */,
 				F65880A1270E9ADF009FABD9 /* ArtPiece.swift in Sources */,
@@ -1182,7 +1194,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = WSQDUZ2WWX;
+				DEVELOPMENT_TEAM = QF63X87GTF;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/FallMusic",
@@ -1221,7 +1233,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = WSQDUZ2WWX;
+				DEVELOPMENT_TEAM = QF63X87GTF;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/FallMusic",

@@ -736,6 +736,21 @@
             </objects>
             <point key="canvasLocation" x="-384" y="119"/>
         </scene>
+        <!--Show View Controller-->
+        <scene sceneID="gCI-Pj-1Ic">
+            <objects>
+                <viewController storyboardIdentifier="ShowVC" id="QfQ-bP-n0b" customClass="ShowViewController" customModule="FallMusic" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SIn-bQ-zSf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="cGE-mU-rU3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sIk-zT-6Kg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1468" y="1006"/>
+        </scene>
         <!--探索-->
         <scene sceneID="0XQ-tO-hxd">
             <objects>

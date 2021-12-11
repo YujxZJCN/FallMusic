@@ -309,7 +309,7 @@ class CameraViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        timer = Timer.scheduledTimer(timeInterval: 4.0, target: self, selector: #selector(timerEvent), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 10.0, target: self, selector: #selector(timerEvent), userInfo: nil, repeats: true)
         scanView.alpha = 1.0
     }
     

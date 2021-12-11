@@ -20,6 +20,9 @@ class CameraViewController: UIViewController {
     @IBAction func dismissButtonTapped(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
+    
+    @IBOutlet var scanView: UIView!
+    
     @IBOutlet var styleButtons: [UIButton]! {
         didSet {
             for btn in styleButtons {
@@ -306,7 +309,8 @@ class CameraViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        timer = Timer.scheduledTimer(timeInterval: 10.0, target: self, selector: #selector(timerEvent), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(timerEvent), userInfo: nil, repeats: true)
+        scanView.alpha = 1.0
     }
     
     @objc func timerEvent() {
@@ -420,15 +424,14 @@ extension PHAsset {
 
 extension CameraViewController: VideoUploadAndProcessDoneProtocol {
     func uploadAndProcessDone() {
-        UIView.animate(withDuration: 0.5) {
-            DispatchQueue.main.async {
+        DispatchQueue.main.async {
+            self.scanView.removeFromSuperview()
+            UIView.animate(withDuration: 0.5) {
                 self.musicStyleView.transform = .identity
+            } completion: { completed in
+                return
             }
-            
-        } completion: { completed in
-            return
         }
-
     }
 }
 

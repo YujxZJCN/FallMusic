@@ -1123,6 +1123,31 @@
                                     <constraint firstAttribute="trailing" secondItem="j8W-hK-hCA" secondAttribute="trailing" constant="17" id="l6u-Jt-jdh"/>
                                 </constraints>
                             </view>
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XLv-Fq-SIw">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请扫描视频拍摄环境" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TNi-c0-9Vg">
+                                        <rect key="frame" x="129" y="349" width="156" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scanGIF" translatesAutoresizingMaskIntoConstraints="NO" id="GBH-aP-NpE">
+                                        <rect key="frame" x="182" y="399" width="50" height="98"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="GBH-aP-NpE" secondAttribute="height" multiplier="153:299" id="IVj-Ox-ulW"/>
+                                            <constraint firstAttribute="width" constant="50" id="Ks1-fa-pZI"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.46999999999999997" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="TNi-c0-9Vg" firstAttribute="top" secondItem="GBH-aP-NpE" secondAttribute="top" constant="-50" id="5JB-jn-s9e"/>
+                                    <constraint firstItem="GBH-aP-NpE" firstAttribute="centerY" secondItem="XLv-Fq-SIw" secondAttribute="centerY" id="DAw-ES-fHY"/>
+                                    <constraint firstItem="TNi-c0-9Vg" firstAttribute="centerX" secondItem="XLv-Fq-SIw" secondAttribute="centerX" id="YkQ-an-xlU"/>
+                                    <constraint firstItem="GBH-aP-NpE" firstAttribute="centerX" secondItem="XLv-Fq-SIw" secondAttribute="centerX" id="hNg-Zm-EVd"/>
+                                </constraints>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wLj-99-yp0">
                                 <rect key="frame" x="20" y="44" width="37" height="37"/>
                                 <constraints>
@@ -1140,6 +1165,7 @@
                         <viewLayoutGuide key="safeArea" id="1QP-u6-hgM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="XLv-Fq-SIw" secondAttribute="bottom" id="11Q-rW-1AI"/>
                             <constraint firstItem="rX8-G7-XdL" firstAttribute="trailing" secondItem="1QP-u6-hgM" secondAttribute="trailing" id="3V2-rW-0I8"/>
                             <constraint firstAttribute="bottom" secondItem="rX8-G7-XdL" secondAttribute="bottom" id="3hZ-4e-bjm"/>
                             <constraint firstItem="wLj-99-yp0" firstAttribute="leading" secondItem="1QP-u6-hgM" secondAttribute="leading" constant="20" id="Ije-NQ-dNn"/>
@@ -1147,14 +1173,18 @@
                             <constraint firstItem="4OM-5M-Yhq" firstAttribute="leading" secondItem="1QP-u6-hgM" secondAttribute="leading" id="bar-oE-QHE"/>
                             <constraint firstItem="wLj-99-yp0" firstAttribute="top" secondItem="1QP-u6-hgM" secondAttribute="top" id="nmH-4u-FMw"/>
                             <constraint firstItem="rX8-G7-XdL" firstAttribute="leading" secondItem="1QP-u6-hgM" secondAttribute="leading" id="pKk-7W-e8o"/>
+                            <constraint firstItem="XLv-Fq-SIw" firstAttribute="trailing" secondItem="1QP-u6-hgM" secondAttribute="trailing" id="ps9-pz-2D9"/>
                             <constraint firstItem="4OM-5M-Yhq" firstAttribute="trailing" secondItem="1QP-u6-hgM" secondAttribute="trailing" id="qiw-fL-FwU"/>
+                            <constraint firstItem="XLv-Fq-SIw" firstAttribute="leading" secondItem="1QP-u6-hgM" secondAttribute="leading" id="uH3-HZ-GAA"/>
                             <constraint firstItem="4OM-5M-Yhq" firstAttribute="top" secondItem="lxZ-Oz-23u" secondAttribute="top" id="wJI-sT-QhA"/>
+                            <constraint firstItem="XLv-Fq-SIw" firstAttribute="top" secondItem="lxZ-Oz-23u" secondAttribute="top" id="xxb-1q-EGu"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Fll-7e-YOK"/>
                     <connections>
                         <outlet property="monitorView" destination="4OM-5M-Yhq" id="sWs-zl-AOA"/>
                         <outlet property="musicStyleView" destination="rX8-G7-XdL" id="SIR-mx-aqy"/>
+                        <outlet property="scanView" destination="XLv-Fq-SIw" id="vMW-EW-sPD"/>
                         <outletCollection property="styleButtons" destination="qBZ-vK-DJ9" collectionClass="NSMutableArray" id="qAi-gB-8e5"/>
                         <outletCollection property="styleButtons" destination="EAJ-3i-eCf" collectionClass="NSMutableArray" id="lKo-Ct-IwO"/>
                         <outletCollection property="styleButtons" destination="dGi-JR-Qr6" collectionClass="NSMutableArray" id="TJ9-Z8-SGD"/>
@@ -1186,6 +1216,7 @@
         <image name="playground_unselect" width="25" height="29.5"/>
         <image name="rock" width="5184" height="3456"/>
         <image name="scan" width="56" height="54"/>
+        <image name="scanGIF" width="153" height="299"/>
         <image name="search" width="92" height="83"/>
         <image name="setting" width="60" height="64"/>
         <image name="star" width="56" height="53"/>

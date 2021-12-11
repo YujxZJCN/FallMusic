@@ -7,6 +7,89 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C3035FA27645F0400683B75 /* Icosa-Pink-Specular.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C3035D627645F0100683B75 /* Icosa-Pink-Specular.usdz */; };
+		4C3035FB27645F0400683B75 /* Octa-02-Blue-Specular.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C3035D727645F0100683B75 /* Octa-02-Blue-Specular.usdz */; };
+		4C3035FC27645F0400683B75 /* Diamond-Blue-Specular.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C3035D827645F0200683B75 /* Diamond-Blue-Specular.usdz */; };
+		4C3035FD27645F0400683B75 /* Radiant-Yellow-Specular.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C3035D927645F0200683B75 /* Radiant-Yellow-Specular.usdz */; };
+		4C3035FE27645F0400683B75 /* Dodeca-Yellow-Specular.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C3035DA27645F0200683B75 /* Dodeca-Yellow-Specular.usdz */; };
+		4C3035FF27645F0400683B75 /* Icosa-Cyan-Specular.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C3035DB27645F0200683B75 /* Icosa-Cyan-Specular.usdz */; };
+		4C30360027645F0400683B75 /* Radiant-Peach-Specular.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C3035DC27645F0200683B75 /* Radiant-Peach-Specular.usdz */; };
+		4C30360127645F0400683B75 /* Radiant-Pink-Specular.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C3035DD27645F0200683B75 /* Radiant-Pink-Specular.usdz */; };
+		4C30360227645F0400683B75 /* Diamond-Cyan-Specular.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C3035DE27645F0200683B75 /* Diamond-Cyan-Specular.usdz */; };
+		4C30360327645F0400683B75 /* Dodeca-Blue-Specular.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C3035DF27645F0200683B75 /* Dodeca-Blue-Specular.usdz */; };
+		4C30360427645F0400683B75 /* Diamond-Pink-Specular.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C3035E027645F0200683B75 /* Diamond-Pink-Specular.usdz */; };
+		4C30360527645F0400683B75 /* Octa-02-Yellow-Specular.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C3035E127645F0200683B75 /* Octa-02-Yellow-Specular.usdz */; };
+		4C30360627645F0400683B75 /* Dodeca-Green-Specular.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C3035E227645F0200683B75 /* Dodeca-Green-Specular.usdz */; };
+		4C30360727645F0400683B75 /* Dodeca-Peach-Specular.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C3035E327645F0200683B75 /* Dodeca-Peach-Specular.usdz */; };
+		4C30360827645F0400683B75 /* Icosa-Green-Specular.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C3035E427645F0200683B75 /* Icosa-Green-Specular.usdz */; };
+		4C30360927645F0400683B75 /* Radiant-Blue-Specular.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C3035E527645F0200683B75 /* Radiant-Blue-Specular.usdz */; };
+		4C30360A27645F0400683B75 /* Octa-01-Cyan-Specular.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C3035E627645F0200683B75 /* Octa-01-Cyan-Specular.usdz */; };
+		4C30360B27645F0400683B75 /* Radiant-Green-Specular.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C3035E727645F0200683B75 /* Radiant-Green-Specular.usdz */; };
+		4C30360C27645F0400683B75 /* Octa-02-Pink-Specular.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C3035E827645F0300683B75 /* Octa-02-Pink-Specular.usdz */; };
+		4C30360D27645F0400683B75 /* Diamond-Peach-Specular.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C3035E927645F0300683B75 /* Diamond-Peach-Specular.usdz */; };
+		4C30360E27645F0400683B75 /* Octa-02-Peach-Specular.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C3035EA27645F0300683B75 /* Octa-02-Peach-Specular.usdz */; };
+		4C30360F27645F0400683B75 /* Octa-01-Blue-Specular.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C3035EB27645F0300683B75 /* Octa-01-Blue-Specular.usdz */; };
+		4C30361027645F0400683B75 /* Octa-01-Yellow-Specular.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C3035EC27645F0300683B75 /* Octa-01-Yellow-Specular.usdz */; };
+		4C30361127645F0400683B75 /* Octa-02-Cyan-Specular.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C3035ED27645F0300683B75 /* Octa-02-Cyan-Specular.usdz */; };
+		4C30361227645F0400683B75 /* Icosa-Peach-Specular.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C3035EE27645F0300683B75 /* Icosa-Peach-Specular.usdz */; };
+		4C30361327645F0400683B75 /* Icosa-Yellow-Specular.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C3035EF27645F0300683B75 /* Icosa-Yellow-Specular.usdz */; };
+		4C30361427645F0400683B75 /* Octa-01-Pink-Specular.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C3035F027645F0300683B75 /* Octa-01-Pink-Specular.usdz */; };
+		4C30361527645F0400683B75 /* Dodeca-Cyan-Specular.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C3035F127645F0300683B75 /* Dodeca-Cyan-Specular.usdz */; };
+		4C30361627645F0400683B75 /* Diamond-Green-Specular.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C3035F227645F0300683B75 /* Diamond-Green-Specular.usdz */; };
+		4C30361727645F0400683B75 /* Octa-02-Green-Specular.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C3035F327645F0300683B75 /* Octa-02-Green-Specular.usdz */; };
+		4C30361827645F0400683B75 /* Dodeca-Pink-Specular.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C3035F427645F0300683B75 /* Dodeca-Pink-Specular.usdz */; };
+		4C30361927645F0400683B75 /* Diamond-Yellow-Specular.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C3035F527645F0300683B75 /* Diamond-Yellow-Specular.usdz */; };
+		4C30361A27645F0400683B75 /* Octa-01-Green-Specular.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C3035F627645F0300683B75 /* Octa-01-Green-Specular.usdz */; };
+		4C30361B27645F0400683B75 /* Radiant-Cyan-Specular.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C3035F727645F0300683B75 /* Radiant-Cyan-Specular.usdz */; };
+		4C30361C27645F0400683B75 /* Octa-01-Peach-Specular.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C3035F827645F0400683B75 /* Octa-01-Peach-Specular.usdz */; };
+		4C30361D27645F0400683B75 /* Icosa-Blue-Specular.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C3035F927645F0400683B75 /* Icosa-Blue-Specular.usdz */; };
+		4C30364527645F2800683B75 /* Items_Spatula_01.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C30361F27645F2600683B75 /* Items_Spatula_01.usdz */; };
+		4C30364627645F2800683B75 /* Items_PlasticCoffeeCup_02.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C30362027645F2600683B75 /* Items_PlasticCoffeeCup_02.usdz */; };
+		4C30364727645F2800683B75 /* Items_Cash_03.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C30362127645F2600683B75 /* Items_Cash_03.usdz */; };
+		4C30364827645F2800683B75 /* Items_Plunger_01.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C30362227645F2600683B75 /* Items_Plunger_01.usdz */; };
+		4C30364927645F2800683B75 /* Items_Beer_01.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C30362327645F2600683B75 /* Items_Beer_01.usdz */; };
+		4C30364A27645F2800683B75 /* Items_Cash_02.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C30362427645F2600683B75 /* Items_Cash_02.usdz */; };
+		4C30364B27645F2800683B75 /* Items_Cash_01.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C30362527645F2600683B75 /* Items_Cash_01.usdz */; };
+		4C30364C27645F2800683B75 /* Items_Burger_01.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C30362627645F2600683B75 /* Items_Burger_01.usdz */; };
+		4C30364D27645F2800683B75 /* Items_ChocolateBar_02.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C30362727645F2600683B75 /* Items_ChocolateBar_02.usdz */; };
+		4C30364E27645F2800683B75 /* Items_Taco_01.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C30362827645F2600683B75 /* Items_Taco_01.usdz */; };
+		4C30364F27645F2800683B75 /* Items_Donut_03.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C30362927645F2600683B75 /* Items_Donut_03.usdz */; };
+		4C30365027645F2800683B75 /* Items_Cake_01.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C30362A27645F2700683B75 /* Items_Cake_01.usdz */; };
+		4C30365127645F2800683B75 /* Items_HotDog_01.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C30362B27645F2700683B75 /* Items_HotDog_01.usdz */; };
+		4C30365227645F2800683B75 /* Items_CoffeeCup_02.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C30362C27645F2700683B75 /* Items_CoffeeCup_02.usdz */; };
+		4C30365327645F2800683B75 /* Items_SodaCan_03.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C30362D27645F2700683B75 /* Items_SodaCan_03.usdz */; };
+		4C30365427645F2800683B75 /* Items_FryPan_01.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C30362E27645F2700683B75 /* Items_FryPan_01.usdz */; };
+		4C30365527645F2800683B75 /* Items_PopCorn_01.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C30362F27645F2700683B75 /* Items_PopCorn_01.usdz */; };
+		4C30365627645F2800683B75 /* Items_Sandwich_01.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C30363027645F2700683B75 /* Items_Sandwich_01.usdz */; };
+		4C30365727645F2800683B75 /* Items_Coin_02.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C30363127645F2700683B75 /* Items_Coin_02.usdz */; };
+		4C30365827645F2800683B75 /* Items_IceBlock_03.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C30363227645F2700683B75 /* Items_IceBlock_03.usdz */; };
+		4C30365927645F2800683B75 /* Items_Apple_01.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C30363327645F2700683B75 /* Items_Apple_01.usdz */; };
+		4C30365A27645F2800683B75 /* Items_Banana_01.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C30363427645F2700683B75 /* Items_Banana_01.usdz */; };
+		4C30365B27645F2800683B75 /* Items_Coin_01.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C30363527645F2700683B75 /* Items_Coin_01.usdz */; };
+		4C30365C27645F2800683B75 /* Items_Donut_01.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C30363627645F2700683B75 /* Items_Donut_01.usdz */; };
+		4C30365D27645F2800683B75 /* Items_Cookie_01.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C30363727645F2700683B75 /* Items_Cookie_01.usdz */; };
+		4C30365E27645F2800683B75 /* Items_Spanner_01.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C30363827645F2700683B75 /* Items_Spanner_01.usdz */; };
+		4C30365F27645F2800683B75 /* Items_Wrench_01.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C30363927645F2700683B75 /* Items_Wrench_01.usdz */; };
+		4C30366027645F2800683B75 /* Items_SmartPhone_08.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C30363A27645F2700683B75 /* Items_SmartPhone_08.usdz */; };
+		4C30366127645F2800683B75 /* Items_WalkieTalkie_02.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C30363B27645F2700683B75 /* Items_WalkieTalkie_02.usdz */; };
+		4C30366227645F2800683B75 /* Items_IceBlock_01.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C30363C27645F2800683B75 /* Items_IceBlock_01.usdz */; };
+		4C30366327645F2800683B75 /* Items_Hammer_01.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C30363D27645F2800683B75 /* Items_Hammer_01.usdz */; };
+		4C30366427645F2800683B75 /* Items_SmartPhone_01.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C30363E27645F2800683B75 /* Items_SmartPhone_01.usdz */; };
+		4C30366527645F2800683B75 /* Items_CupCake_03.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C30363F27645F2800683B75 /* Items_CupCake_03.usdz */; };
+		4C30366627645F2800683B75 /* Items_EnergyCan_01.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C30364027645F2800683B75 /* Items_EnergyCan_01.usdz */; };
+		4C30366727645F2800683B75 /* Items_FryPan_02.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C30364127645F2800683B75 /* Items_FryPan_02.usdz */; };
+		4C30366827645F2800683B75 /* Items_StrawCup_02.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C30364227645F2800683B75 /* Items_StrawCup_02.usdz */; };
+		4C30366927645F2800683B75 /* Items_MilkCarton_02.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C30364327645F2800683B75 /* Items_MilkCarton_02.usdz */; };
+		4C30366A27645F2800683B75 /* Items_Donut_02.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C30364427645F2800683B75 /* Items_Donut_02.usdz */; };
+		4C30367527645F3E00683B75 /* Neptune.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C30366C27645F3D00683B75 /* Neptune.usdz */; };
+		4C30367627645F3E00683B75 /* Moon.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C30366D27645F3D00683B75 /* Moon.usdz */; };
+		4C30367727645F3E00683B75 /* Mercury.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C30366E27645F3D00683B75 /* Mercury.usdz */; };
+		4C30367827645F3E00683B75 /* Mars.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C30366F27645F3D00683B75 /* Mars.usdz */; };
+		4C30367927645F3E00683B75 /* Saturn.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C30367027645F3D00683B75 /* Saturn.usdz */; };
+		4C30367A27645F3E00683B75 /* Earth.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C30367127645F3D00683B75 /* Earth.usdz */; };
+		4C30367B27645F3E00683B75 /* Sun.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C30367227645F3E00683B75 /* Sun.usdz */; };
+		4C30367C27645F3E00683B75 /* Jupiter.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C30367327645F3E00683B75 /* Jupiter.usdz */; };
+		4C30367D27645F3E00683B75 /* Pluto.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C30367427645F3E00683B75 /* Pluto.usdz */; };
 		76E8628DF7439524861DA1CA /* Pods_FallMusic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DF4C19ADA1025DF7FDEF559 /* Pods_FallMusic.framework */; };
 		F608CA2A270B37BD002B7FDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F608CA29270B37BD002B7FDA /* AppDelegate.swift */; };
 		F608CA2C270B37BD002B7FDA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F608CA2B270B37BD002B7FDA /* SceneDelegate.swift */; };
@@ -110,6 +193,89 @@
 
 /* Begin PBXFileReference section */
 		134AD36A3AC2619E97DC7967 /* Pods-FallMusic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FallMusic.debug.xcconfig"; path = "Target Support Files/Pods-FallMusic/Pods-FallMusic.debug.xcconfig"; sourceTree = "<group>"; };
+		4C3035D627645F0100683B75 /* Icosa-Pink-Specular.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "Icosa-Pink-Specular.usdz"; sourceTree = "<group>"; };
+		4C3035D727645F0100683B75 /* Octa-02-Blue-Specular.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "Octa-02-Blue-Specular.usdz"; sourceTree = "<group>"; };
+		4C3035D827645F0200683B75 /* Diamond-Blue-Specular.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "Diamond-Blue-Specular.usdz"; sourceTree = "<group>"; };
+		4C3035D927645F0200683B75 /* Radiant-Yellow-Specular.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "Radiant-Yellow-Specular.usdz"; sourceTree = "<group>"; };
+		4C3035DA27645F0200683B75 /* Dodeca-Yellow-Specular.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "Dodeca-Yellow-Specular.usdz"; sourceTree = "<group>"; };
+		4C3035DB27645F0200683B75 /* Icosa-Cyan-Specular.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "Icosa-Cyan-Specular.usdz"; sourceTree = "<group>"; };
+		4C3035DC27645F0200683B75 /* Radiant-Peach-Specular.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "Radiant-Peach-Specular.usdz"; sourceTree = "<group>"; };
+		4C3035DD27645F0200683B75 /* Radiant-Pink-Specular.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "Radiant-Pink-Specular.usdz"; sourceTree = "<group>"; };
+		4C3035DE27645F0200683B75 /* Diamond-Cyan-Specular.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "Diamond-Cyan-Specular.usdz"; sourceTree = "<group>"; };
+		4C3035DF27645F0200683B75 /* Dodeca-Blue-Specular.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "Dodeca-Blue-Specular.usdz"; sourceTree = "<group>"; };
+		4C3035E027645F0200683B75 /* Diamond-Pink-Specular.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "Diamond-Pink-Specular.usdz"; sourceTree = "<group>"; };
+		4C3035E127645F0200683B75 /* Octa-02-Yellow-Specular.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "Octa-02-Yellow-Specular.usdz"; sourceTree = "<group>"; };
+		4C3035E227645F0200683B75 /* Dodeca-Green-Specular.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "Dodeca-Green-Specular.usdz"; sourceTree = "<group>"; };
+		4C3035E327645F0200683B75 /* Dodeca-Peach-Specular.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "Dodeca-Peach-Specular.usdz"; sourceTree = "<group>"; };
+		4C3035E427645F0200683B75 /* Icosa-Green-Specular.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "Icosa-Green-Specular.usdz"; sourceTree = "<group>"; };
+		4C3035E527645F0200683B75 /* Radiant-Blue-Specular.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "Radiant-Blue-Specular.usdz"; sourceTree = "<group>"; };
+		4C3035E627645F0200683B75 /* Octa-01-Cyan-Specular.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "Octa-01-Cyan-Specular.usdz"; sourceTree = "<group>"; };
+		4C3035E727645F0200683B75 /* Radiant-Green-Specular.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "Radiant-Green-Specular.usdz"; sourceTree = "<group>"; };
+		4C3035E827645F0300683B75 /* Octa-02-Pink-Specular.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "Octa-02-Pink-Specular.usdz"; sourceTree = "<group>"; };
+		4C3035E927645F0300683B75 /* Diamond-Peach-Specular.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "Diamond-Peach-Specular.usdz"; sourceTree = "<group>"; };
+		4C3035EA27645F0300683B75 /* Octa-02-Peach-Specular.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "Octa-02-Peach-Specular.usdz"; sourceTree = "<group>"; };
+		4C3035EB27645F0300683B75 /* Octa-01-Blue-Specular.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "Octa-01-Blue-Specular.usdz"; sourceTree = "<group>"; };
+		4C3035EC27645F0300683B75 /* Octa-01-Yellow-Specular.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "Octa-01-Yellow-Specular.usdz"; sourceTree = "<group>"; };
+		4C3035ED27645F0300683B75 /* Octa-02-Cyan-Specular.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "Octa-02-Cyan-Specular.usdz"; sourceTree = "<group>"; };
+		4C3035EE27645F0300683B75 /* Icosa-Peach-Specular.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "Icosa-Peach-Specular.usdz"; sourceTree = "<group>"; };
+		4C3035EF27645F0300683B75 /* Icosa-Yellow-Specular.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "Icosa-Yellow-Specular.usdz"; sourceTree = "<group>"; };
+		4C3035F027645F0300683B75 /* Octa-01-Pink-Specular.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "Octa-01-Pink-Specular.usdz"; sourceTree = "<group>"; };
+		4C3035F127645F0300683B75 /* Dodeca-Cyan-Specular.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "Dodeca-Cyan-Specular.usdz"; sourceTree = "<group>"; };
+		4C3035F227645F0300683B75 /* Diamond-Green-Specular.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "Diamond-Green-Specular.usdz"; sourceTree = "<group>"; };
+		4C3035F327645F0300683B75 /* Octa-02-Green-Specular.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "Octa-02-Green-Specular.usdz"; sourceTree = "<group>"; };
+		4C3035F427645F0300683B75 /* Dodeca-Pink-Specular.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "Dodeca-Pink-Specular.usdz"; sourceTree = "<group>"; };
+		4C3035F527645F0300683B75 /* Diamond-Yellow-Specular.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "Diamond-Yellow-Specular.usdz"; sourceTree = "<group>"; };
+		4C3035F627645F0300683B75 /* Octa-01-Green-Specular.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "Octa-01-Green-Specular.usdz"; sourceTree = "<group>"; };
+		4C3035F727645F0300683B75 /* Radiant-Cyan-Specular.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "Radiant-Cyan-Specular.usdz"; sourceTree = "<group>"; };
+		4C3035F827645F0400683B75 /* Octa-01-Peach-Specular.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "Octa-01-Peach-Specular.usdz"; sourceTree = "<group>"; };
+		4C3035F927645F0400683B75 /* Icosa-Blue-Specular.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "Icosa-Blue-Specular.usdz"; sourceTree = "<group>"; };
+		4C30361F27645F2600683B75 /* Items_Spatula_01.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Items_Spatula_01.usdz; sourceTree = "<group>"; };
+		4C30362027645F2600683B75 /* Items_PlasticCoffeeCup_02.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Items_PlasticCoffeeCup_02.usdz; sourceTree = "<group>"; };
+		4C30362127645F2600683B75 /* Items_Cash_03.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Items_Cash_03.usdz; sourceTree = "<group>"; };
+		4C30362227645F2600683B75 /* Items_Plunger_01.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Items_Plunger_01.usdz; sourceTree = "<group>"; };
+		4C30362327645F2600683B75 /* Items_Beer_01.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Items_Beer_01.usdz; sourceTree = "<group>"; };
+		4C30362427645F2600683B75 /* Items_Cash_02.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Items_Cash_02.usdz; sourceTree = "<group>"; };
+		4C30362527645F2600683B75 /* Items_Cash_01.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Items_Cash_01.usdz; sourceTree = "<group>"; };
+		4C30362627645F2600683B75 /* Items_Burger_01.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Items_Burger_01.usdz; sourceTree = "<group>"; };
+		4C30362727645F2600683B75 /* Items_ChocolateBar_02.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Items_ChocolateBar_02.usdz; sourceTree = "<group>"; };
+		4C30362827645F2600683B75 /* Items_Taco_01.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Items_Taco_01.usdz; sourceTree = "<group>"; };
+		4C30362927645F2600683B75 /* Items_Donut_03.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Items_Donut_03.usdz; sourceTree = "<group>"; };
+		4C30362A27645F2700683B75 /* Items_Cake_01.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Items_Cake_01.usdz; sourceTree = "<group>"; };
+		4C30362B27645F2700683B75 /* Items_HotDog_01.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Items_HotDog_01.usdz; sourceTree = "<group>"; };
+		4C30362C27645F2700683B75 /* Items_CoffeeCup_02.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Items_CoffeeCup_02.usdz; sourceTree = "<group>"; };
+		4C30362D27645F2700683B75 /* Items_SodaCan_03.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Items_SodaCan_03.usdz; sourceTree = "<group>"; };
+		4C30362E27645F2700683B75 /* Items_FryPan_01.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Items_FryPan_01.usdz; sourceTree = "<group>"; };
+		4C30362F27645F2700683B75 /* Items_PopCorn_01.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Items_PopCorn_01.usdz; sourceTree = "<group>"; };
+		4C30363027645F2700683B75 /* Items_Sandwich_01.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Items_Sandwich_01.usdz; sourceTree = "<group>"; };
+		4C30363127645F2700683B75 /* Items_Coin_02.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Items_Coin_02.usdz; sourceTree = "<group>"; };
+		4C30363227645F2700683B75 /* Items_IceBlock_03.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Items_IceBlock_03.usdz; sourceTree = "<group>"; };
+		4C30363327645F2700683B75 /* Items_Apple_01.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Items_Apple_01.usdz; sourceTree = "<group>"; };
+		4C30363427645F2700683B75 /* Items_Banana_01.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Items_Banana_01.usdz; sourceTree = "<group>"; };
+		4C30363527645F2700683B75 /* Items_Coin_01.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Items_Coin_01.usdz; sourceTree = "<group>"; };
+		4C30363627645F2700683B75 /* Items_Donut_01.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Items_Donut_01.usdz; sourceTree = "<group>"; };
+		4C30363727645F2700683B75 /* Items_Cookie_01.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Items_Cookie_01.usdz; sourceTree = "<group>"; };
+		4C30363827645F2700683B75 /* Items_Spanner_01.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Items_Spanner_01.usdz; sourceTree = "<group>"; };
+		4C30363927645F2700683B75 /* Items_Wrench_01.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Items_Wrench_01.usdz; sourceTree = "<group>"; };
+		4C30363A27645F2700683B75 /* Items_SmartPhone_08.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Items_SmartPhone_08.usdz; sourceTree = "<group>"; };
+		4C30363B27645F2700683B75 /* Items_WalkieTalkie_02.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Items_WalkieTalkie_02.usdz; sourceTree = "<group>"; };
+		4C30363C27645F2800683B75 /* Items_IceBlock_01.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Items_IceBlock_01.usdz; sourceTree = "<group>"; };
+		4C30363D27645F2800683B75 /* Items_Hammer_01.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Items_Hammer_01.usdz; sourceTree = "<group>"; };
+		4C30363E27645F2800683B75 /* Items_SmartPhone_01.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Items_SmartPhone_01.usdz; sourceTree = "<group>"; };
+		4C30363F27645F2800683B75 /* Items_CupCake_03.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Items_CupCake_03.usdz; sourceTree = "<group>"; };
+		4C30364027645F2800683B75 /* Items_EnergyCan_01.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Items_EnergyCan_01.usdz; sourceTree = "<group>"; };
+		4C30364127645F2800683B75 /* Items_FryPan_02.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Items_FryPan_02.usdz; sourceTree = "<group>"; };
+		4C30364227645F2800683B75 /* Items_StrawCup_02.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Items_StrawCup_02.usdz; sourceTree = "<group>"; };
+		4C30364327645F2800683B75 /* Items_MilkCarton_02.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Items_MilkCarton_02.usdz; sourceTree = "<group>"; };
+		4C30364427645F2800683B75 /* Items_Donut_02.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Items_Donut_02.usdz; sourceTree = "<group>"; };
+		4C30366C27645F3D00683B75 /* Neptune.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Neptune.usdz; sourceTree = "<group>"; };
+		4C30366D27645F3D00683B75 /* Moon.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Moon.usdz; sourceTree = "<group>"; };
+		4C30366E27645F3D00683B75 /* Mercury.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Mercury.usdz; sourceTree = "<group>"; };
+		4C30366F27645F3D00683B75 /* Mars.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Mars.usdz; sourceTree = "<group>"; };
+		4C30367027645F3D00683B75 /* Saturn.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Saturn.usdz; sourceTree = "<group>"; };
+		4C30367127645F3D00683B75 /* Earth.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Earth.usdz; sourceTree = "<group>"; };
+		4C30367227645F3E00683B75 /* Sun.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Sun.usdz; sourceTree = "<group>"; };
+		4C30367327645F3E00683B75 /* Jupiter.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Jupiter.usdz; sourceTree = "<group>"; };
+		4C30367427645F3E00683B75 /* Pluto.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Pluto.usdz; sourceTree = "<group>"; };
 		6DF4C19ADA1025DF7FDEF559 /* Pods_FallMusic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FallMusic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AABC419A0756B492E61C1F03 /* Pods-FallMusic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FallMusic.release.xcconfig"; path = "Target Support Files/Pods-FallMusic/Pods-FallMusic.release.xcconfig"; sourceTree = "<group>"; };
 		F608CA26270B37BD002B7FDA /* FallMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FallMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -229,6 +395,110 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C3035D527645EE400683B75 /* Gems */ = {
+			isa = PBXGroup;
+			children = (
+				4C3035D827645F0200683B75 /* Diamond-Blue-Specular.usdz */,
+				4C3035DE27645F0200683B75 /* Diamond-Cyan-Specular.usdz */,
+				4C3035F227645F0300683B75 /* Diamond-Green-Specular.usdz */,
+				4C3035E927645F0300683B75 /* Diamond-Peach-Specular.usdz */,
+				4C3035E027645F0200683B75 /* Diamond-Pink-Specular.usdz */,
+				4C3035F527645F0300683B75 /* Diamond-Yellow-Specular.usdz */,
+				4C3035DF27645F0200683B75 /* Dodeca-Blue-Specular.usdz */,
+				4C3035F127645F0300683B75 /* Dodeca-Cyan-Specular.usdz */,
+				4C3035E227645F0200683B75 /* Dodeca-Green-Specular.usdz */,
+				4C3035E327645F0200683B75 /* Dodeca-Peach-Specular.usdz */,
+				4C3035F427645F0300683B75 /* Dodeca-Pink-Specular.usdz */,
+				4C3035DA27645F0200683B75 /* Dodeca-Yellow-Specular.usdz */,
+				4C3035F927645F0400683B75 /* Icosa-Blue-Specular.usdz */,
+				4C3035DB27645F0200683B75 /* Icosa-Cyan-Specular.usdz */,
+				4C3035E427645F0200683B75 /* Icosa-Green-Specular.usdz */,
+				4C3035EE27645F0300683B75 /* Icosa-Peach-Specular.usdz */,
+				4C3035D627645F0100683B75 /* Icosa-Pink-Specular.usdz */,
+				4C3035EF27645F0300683B75 /* Icosa-Yellow-Specular.usdz */,
+				4C3035EB27645F0300683B75 /* Octa-01-Blue-Specular.usdz */,
+				4C3035E627645F0200683B75 /* Octa-01-Cyan-Specular.usdz */,
+				4C3035F627645F0300683B75 /* Octa-01-Green-Specular.usdz */,
+				4C3035F827645F0400683B75 /* Octa-01-Peach-Specular.usdz */,
+				4C3035F027645F0300683B75 /* Octa-01-Pink-Specular.usdz */,
+				4C3035EC27645F0300683B75 /* Octa-01-Yellow-Specular.usdz */,
+				4C3035D727645F0100683B75 /* Octa-02-Blue-Specular.usdz */,
+				4C3035ED27645F0300683B75 /* Octa-02-Cyan-Specular.usdz */,
+				4C3035F327645F0300683B75 /* Octa-02-Green-Specular.usdz */,
+				4C3035EA27645F0300683B75 /* Octa-02-Peach-Specular.usdz */,
+				4C3035E827645F0300683B75 /* Octa-02-Pink-Specular.usdz */,
+				4C3035E127645F0200683B75 /* Octa-02-Yellow-Specular.usdz */,
+				4C3035E527645F0200683B75 /* Radiant-Blue-Specular.usdz */,
+				4C3035F727645F0300683B75 /* Radiant-Cyan-Specular.usdz */,
+				4C3035E727645F0200683B75 /* Radiant-Green-Specular.usdz */,
+				4C3035DC27645F0200683B75 /* Radiant-Peach-Specular.usdz */,
+				4C3035DD27645F0200683B75 /* Radiant-Pink-Specular.usdz */,
+				4C3035D927645F0200683B75 /* Radiant-Yellow-Specular.usdz */,
+			);
+			path = Gems;
+			sourceTree = "<group>";
+		};
+		4C30361E27645F0D00683B75 /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				4C30363327645F2700683B75 /* Items_Apple_01.usdz */,
+				4C30363427645F2700683B75 /* Items_Banana_01.usdz */,
+				4C30362327645F2600683B75 /* Items_Beer_01.usdz */,
+				4C30362627645F2600683B75 /* Items_Burger_01.usdz */,
+				4C30362A27645F2700683B75 /* Items_Cake_01.usdz */,
+				4C30362527645F2600683B75 /* Items_Cash_01.usdz */,
+				4C30362427645F2600683B75 /* Items_Cash_02.usdz */,
+				4C30362127645F2600683B75 /* Items_Cash_03.usdz */,
+				4C30362727645F2600683B75 /* Items_ChocolateBar_02.usdz */,
+				4C30362C27645F2700683B75 /* Items_CoffeeCup_02.usdz */,
+				4C30363527645F2700683B75 /* Items_Coin_01.usdz */,
+				4C30363127645F2700683B75 /* Items_Coin_02.usdz */,
+				4C30363727645F2700683B75 /* Items_Cookie_01.usdz */,
+				4C30363F27645F2800683B75 /* Items_CupCake_03.usdz */,
+				4C30363627645F2700683B75 /* Items_Donut_01.usdz */,
+				4C30364427645F2800683B75 /* Items_Donut_02.usdz */,
+				4C30362927645F2600683B75 /* Items_Donut_03.usdz */,
+				4C30364027645F2800683B75 /* Items_EnergyCan_01.usdz */,
+				4C30362E27645F2700683B75 /* Items_FryPan_01.usdz */,
+				4C30364127645F2800683B75 /* Items_FryPan_02.usdz */,
+				4C30363D27645F2800683B75 /* Items_Hammer_01.usdz */,
+				4C30362B27645F2700683B75 /* Items_HotDog_01.usdz */,
+				4C30363C27645F2800683B75 /* Items_IceBlock_01.usdz */,
+				4C30363227645F2700683B75 /* Items_IceBlock_03.usdz */,
+				4C30364327645F2800683B75 /* Items_MilkCarton_02.usdz */,
+				4C30362027645F2600683B75 /* Items_PlasticCoffeeCup_02.usdz */,
+				4C30362227645F2600683B75 /* Items_Plunger_01.usdz */,
+				4C30362F27645F2700683B75 /* Items_PopCorn_01.usdz */,
+				4C30363027645F2700683B75 /* Items_Sandwich_01.usdz */,
+				4C30363E27645F2800683B75 /* Items_SmartPhone_01.usdz */,
+				4C30363A27645F2700683B75 /* Items_SmartPhone_08.usdz */,
+				4C30362D27645F2700683B75 /* Items_SodaCan_03.usdz */,
+				4C30363827645F2700683B75 /* Items_Spanner_01.usdz */,
+				4C30361F27645F2600683B75 /* Items_Spatula_01.usdz */,
+				4C30364227645F2800683B75 /* Items_StrawCup_02.usdz */,
+				4C30362827645F2600683B75 /* Items_Taco_01.usdz */,
+				4C30363B27645F2700683B75 /* Items_WalkieTalkie_02.usdz */,
+				4C30363927645F2700683B75 /* Items_Wrench_01.usdz */,
+			);
+			path = Items;
+			sourceTree = "<group>";
+		};
+		4C30366B27645F2E00683B75 /* Planets */ = {
+			isa = PBXGroup;
+			children = (
+				4C30367127645F3D00683B75 /* Earth.usdz */,
+				4C30367327645F3E00683B75 /* Jupiter.usdz */,
+				4C30366F27645F3D00683B75 /* Mars.usdz */,
+				4C30366E27645F3D00683B75 /* Mercury.usdz */,
+				4C30366D27645F3D00683B75 /* Moon.usdz */,
+				4C30366C27645F3D00683B75 /* Neptune.usdz */,
+				4C30367427645F3E00683B75 /* Pluto.usdz */,
+				4C30367027645F3D00683B75 /* Saturn.usdz */,
+				4C30367227645F3E00683B75 /* Sun.usdz */,
+			);
+			path = Planets;
+			sourceTree = "<group>";
+		};
 		775995A4863914F6C78E7F60 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -327,6 +597,9 @@
 		F6622A8C272576A100F587D5 /* 3D Models */ = {
 			isa = PBXGroup;
 			children = (
+				4C30366B27645F2E00683B75 /* Planets */,
+				4C30361E27645F0D00683B75 /* Items */,
+				4C3035D527645EE400683B75 /* Gems */,
 				F6622A8D272576A100F587D5 /* Grass_A_03.usdz */,
 				F6622A8E272576A100F587D5 /* Flower_A_8.usdz */,
 				F6622A8F272576A100F587D5 /* Plant_F_01.usdz */,
@@ -526,73 +799,156 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C30360927645F0400683B75 /* Radiant-Blue-Specular.usdz in Resources */,
 				F6BD5B6C2761C98800C2B604 /* china5.mp3 in Resources */,
 				F6BD5B6D2761C98800C2B604 /* china4.mp3 in Resources */,
+				4C30365D27645F2800683B75 /* Items_Cookie_01.usdz in Resources */,
+				4C3035FA27645F0400683B75 /* Icosa-Pink-Specular.usdz in Resources */,
 				F608CA39270B37BF002B7FDA /* LaunchScreen.storyboard in Resources */,
 				F6BD5B712761C98800C2B604 /* china1.mp3 in Resources */,
 				F6BD5B692761C98800C2B604 /* pop16.mp3 in Resources */,
+				4C30366027645F2800683B75 /* Items_SmartPhone_08.usdz in Resources */,
+				4C30365027645F2800683B75 /* Items_Cake_01.usdz in Resources */,
 				F6BD5B772761C98800C2B604 /* jazz8.mp3 in Resources */,
 				F6BD5B7C2761C98800C2B604 /* jazz4.mp3 in Resources */,
+				4C30364927645F2800683B75 /* Items_Beer_01.usdz in Resources */,
 				F6BD5B782761C98800C2B604 /* jazz14.mp3 in Resources */,
 				F6622A9F272576A100F587D5 /* Grass_A_03.usdz in Resources */,
+				4C30364E27645F2800683B75 /* Items_Taco_01.usdz in Resources */,
+				4C30360227645F0400683B75 /* Diamond-Cyan-Specular.usdz in Resources */,
 				F6BD5B622761C98800C2B604 /* pop5.mp3 in Resources */,
+				4C30366927645F2800683B75 /* Items_MilkCarton_02.usdz in Resources */,
 				F6622AA3272576A100F587D5 /* Cloud_A_2.usdz in Resources */,
+				4C30361C27645F0400683B75 /* Octa-01-Peach-Specular.usdz in Resources */,
+				4C30361427645F0400683B75 /* Octa-01-Pink-Specular.usdz in Resources */,
+				4C30367B27645F3E00683B75 /* Sun.usdz in Resources */,
+				4C3035FF27645F0400683B75 /* Icosa-Cyan-Specular.usdz in Resources */,
+				4C30367727645F3E00683B75 /* Mercury.usdz in Resources */,
 				F6BD5B6B2761C98800C2B604 /* pop9.mp3 in Resources */,
 				F6622AA9272576A100F587D5 /* Plant_F_03.usdz in Resources */,
+				4C30367527645F3E00683B75 /* Neptune.usdz in Resources */,
 				F6BD5B6E2761C98800C2B604 /* china6.mp3 in Resources */,
+				4C30360B27645F0400683B75 /* Radiant-Green-Specular.usdz in Resources */,
+				4C30366627645F2800683B75 /* Items_EnergyCan_01.usdz in Resources */,
+				4C30361B27645F0400683B75 /* Radiant-Cyan-Specular.usdz in Resources */,
+				4C30365427645F2800683B75 /* Items_FryPan_01.usdz in Resources */,
+				4C30364D27645F2800683B75 /* Items_ChocolateBar_02.usdz in Resources */,
 				F6BD5B642761C98800C2B604 /* pop14.mp3 in Resources */,
+				4C30361627645F0400683B75 /* Diamond-Green-Specular.usdz in Resources */,
+				4C30366A27645F2800683B75 /* Items_Donut_02.usdz in Resources */,
 				F6BD5B812761C98800C2B604 /* country6.mp3 in Resources */,
 				F6622AA5272576A100F587D5 /* Cloud_A_1.usdz in Resources */,
+				4C30361227645F0400683B75 /* Icosa-Peach-Specular.usdz in Resources */,
 				F6BD5B862761C98800C2B604 /* country3.mp3 in Resources */,
 				F6BD5B852761C98800C2B604 /* country2.mp3 in Resources */,
 				F6BD5B842761C98800C2B604 /* country1.mp3 in Resources */,
+				4C3035FC27645F0400683B75 /* Diamond-Blue-Specular.usdz in Resources */,
 				F608CA36270B37BF002B7FDA /* Assets.xcassets in Resources */,
+				4C30361827645F0400683B75 /* Dodeca-Pink-Specular.usdz in Resources */,
+				4C30364F27645F2800683B75 /* Items_Donut_03.usdz in Resources */,
 				F6BD5B672761C98800C2B604 /* pop2.mp3 in Resources */,
 				F6BD5B762761C98800C2B604 /* jazz9.mp3 in Resources */,
+				4C30366127645F2800683B75 /* Items_WalkieTalkie_02.usdz in Resources */,
+				4C30361527645F0400683B75 /* Dodeca-Cyan-Specular.usdz in Resources */,
+				4C30365627645F2800683B75 /* Items_Sandwich_01.usdz in Resources */,
 				F62D07AB275B958D007DA428 /* FilterCollectionViewCell.xib in Resources */,
+				4C30366827645F2800683B75 /* Items_StrawCup_02.usdz in Resources */,
+				4C30361127645F0400683B75 /* Octa-02-Cyan-Specular.usdz in Resources */,
+				4C30366527645F2800683B75 /* Items_CupCake_03.usdz in Resources */,
+				4C30367A27645F3E00683B75 /* Earth.usdz in Resources */,
+				4C30360F27645F0400683B75 /* Octa-01-Blue-Specular.usdz in Resources */,
+				4C30365B27645F2800683B75 /* Items_Coin_01.usdz in Resources */,
+				4C30360327645F0400683B75 /* Dodeca-Blue-Specular.usdz in Resources */,
+				4C30360E27645F0400683B75 /* Octa-02-Peach-Specular.usdz in Resources */,
+				4C30364B27645F2800683B75 /* Items_Cash_01.usdz in Resources */,
+				4C30365E27645F2800683B75 /* Items_Spanner_01.usdz in Resources */,
 				F6BD5B682761C98800C2B604 /* pop3.mp3 in Resources */,
 				F6622AA6272576A100F587D5 /* Flower_A_6.usdz in Resources */,
+				4C30367627645F3E00683B75 /* Moon.usdz in Resources */,
+				4C30365A27645F2800683B75 /* Items_Banana_01.usdz in Resources */,
 				F6BD5B832761C98800C2B604 /* country5.mp3 in Resources */,
+				4C30360127645F0400683B75 /* Radiant-Pink-Specular.usdz in Resources */,
 				F6622AA2272576A100F587D5 /* Grass_A_02.usdz in Resources */,
+				4C30365927645F2800683B75 /* Items_Apple_01.usdz in Resources */,
 				F62D07AD275B958D007DA428 /* FilterCollection.xib in Resources */,
 				F6BD5B6F2761C98800C2B604 /* china3.mp3 in Resources */,
+				4C30361D27645F0400683B75 /* Icosa-Blue-Specular.usdz in Resources */,
 				F6622AAF272576A100F587D5 /* Launch Screen.storyboard in Resources */,
 				F6BD5B5E2761C98800C2B604 /* pop6.mp3 in Resources */,
+				4C30360827645F0400683B75 /* Icosa-Green-Specular.usdz in Resources */,
+				4C30364827645F2800683B75 /* Items_Plunger_01.usdz in Resources */,
+				4C30364527645F2800683B75 /* Items_Spatula_01.usdz in Resources */,
 				F6BD5B892761C98800C2B604 /* country9.mp3 in Resources */,
 				F6BD5B602761C98800C2B604 /* pop11.mp3 in Resources */,
 				F6BD5B722761C98800C2B604 /* jazz10.mp3 in Resources */,
+				4C30364727645F2800683B75 /* Items_Cash_03.usdz in Resources */,
+				4C30361027645F0400683B75 /* Octa-01-Yellow-Specular.usdz in Resources */,
 				F6622AA0272576A100F587D5 /* Flower_A_8.usdz in Resources */,
 				F6622AA4272576A100F587D5 /* Cloud_A_3.usdz in Resources */,
 				F6BD5B5C2761C98800C2B604 /* pop12.mp3 in Resources */,
+				4C30360527645F0400683B75 /* Octa-02-Yellow-Specular.usdz in Resources */,
 				F6622AAD272576A100F587D5 /* song2.wav in Resources */,
+				4C30366327645F2800683B75 /* Items_Hammer_01.usdz in Resources */,
+				4C30361A27645F0400683B75 /* Octa-01-Green-Specular.usdz in Resources */,
+				4C30365727645F2800683B75 /* Items_Coin_02.usdz in Resources */,
+				4C30360D27645F0400683B75 /* Diamond-Peach-Specular.usdz in Resources */,
 				F6BD5B882761C98800C2B604 /* country8.mp3 in Resources */,
+				4C30361727645F0400683B75 /* Octa-02-Green-Specular.usdz in Resources */,
 				F6BD5B5D2761C98800C2B604 /* pop7.mp3 in Resources */,
 				F6BD5B652761C98800C2B604 /* pop1.mp3 in Resources */,
+				4C3035FE27645F0400683B75 /* Dodeca-Yellow-Specular.usdz in Resources */,
+				4C30365227645F2800683B75 /* Items_CoffeeCup_02.usdz in Resources */,
 				F6BD5B872761C98800C2B604 /* country10.mp3 in Resources */,
+				4C30366227645F2800683B75 /* Items_IceBlock_01.usdz in Resources */,
 				F6BD5B632761C98800C2B604 /* pop10.mp3 in Resources */,
+				4C30360427645F0400683B75 /* Diamond-Pink-Specular.usdz in Resources */,
 				F6622AAA272576A100F587D5 /* Flower_A_7.usdz in Resources */,
+				4C30367C27645F3E00683B75 /* Jupiter.usdz in Resources */,
+				4C30364627645F2800683B75 /* Items_PlasticCoffeeCup_02.usdz in Resources */,
+				4C30365127645F2800683B75 /* Items_HotDog_01.usdz in Resources */,
 				F608CA31270B37BD002B7FDA /* Main.storyboard in Resources */,
 				F6BD5B7A2761C98800C2B604 /* jazz7.mp3 in Resources */,
 				F6BD5B612761C98800C2B604 /* pop4.mp3 in Resources */,
+				4C30360A27645F0400683B75 /* Octa-01-Cyan-Specular.usdz in Resources */,
+				4C30366727645F2800683B75 /* Items_FryPan_02.usdz in Resources */,
 				F6BD5B702761C98800C2B604 /* china2.mp3 in Resources */,
 				F6BD5B7E2761C98800C2B604 /* jazz3.mp3 in Resources */,
+				4C3035FD27645F0400683B75 /* Radiant-Yellow-Specular.usdz in Resources */,
 				F6BD5B792761C98800C2B604 /* jazz6.mp3 in Resources */,
 				F6BD5B802761C98800C2B604 /* country7.mp3 in Resources */,
+				4C30366427645F2800683B75 /* Items_SmartPhone_01.usdz in Resources */,
+				4C30367D27645F3E00683B75 /* Pluto.usdz in Resources */,
+				4C30365827645F2800683B75 /* Items_IceBlock_03.usdz in Resources */,
 				F6BD5B732761C98800C2B604 /* jazz11.mp3 in Resources */,
 				F6BD5B752761C98800C2B604 /* jazz12.mp3 in Resources */,
 				F6622AAC272576A100F587D5 /* song.wav in Resources */,
+				4C30364A27645F2800683B75 /* Items_Cash_02.usdz in Resources */,
 				F6BD5B6A2761C98800C2B604 /* pop8.mp3 in Resources */,
+				4C30364C27645F2800683B75 /* Items_Burger_01.usdz in Resources */,
 				F6622AA1272576A100F587D5 /* Plant_F_01.usdz in Resources */,
 				F6BD5B822761C98800C2B604 /* country4.mp3 in Resources */,
 				F6BD5B7F2761C98800C2B604 /* jazz2.mp3 in Resources */,
 				F6622AA7272576A100F587D5 /* Grass_A_01.usdz in Resources */,
 				F6BD5B662761C98800C2B604 /* pop15.mp3 in Resources */,
 				F6BD5B5F2761C98800C2B604 /* pop13.mp3 in Resources */,
+				4C30360627645F0400683B75 /* Dodeca-Green-Specular.usdz in Resources */,
+				4C30365527645F2800683B75 /* Items_PopCorn_01.usdz in Resources */,
 				F6BD5B7D2761C98800C2B604 /* jazz1.mp3 in Resources */,
+				4C30367827645F3E00683B75 /* Mars.usdz in Resources */,
 				F6BD5B7B2761C98800C2B604 /* jazz5.mp3 in Resources */,
+				4C30361927645F0400683B75 /* Diamond-Yellow-Specular.usdz in Resources */,
 				F6622AAB272576A100F587D5 /* AViolinConcerto.wav in Resources */,
+				4C30365F27645F2800683B75 /* Items_Wrench_01.usdz in Resources */,
 				F6622AA8272576A100F587D5 /* Plant_F_02.usdz in Resources */,
+				4C30360C27645F0400683B75 /* Octa-02-Pink-Specular.usdz in Resources */,
+				4C30361327645F0400683B75 /* Icosa-Yellow-Specular.usdz in Resources */,
+				4C30365327645F2800683B75 /* Items_SodaCan_03.usdz in Resources */,
+				4C3035FB27645F0400683B75 /* Octa-02-Blue-Specular.usdz in Resources */,
+				4C30360027645F0400683B75 /* Radiant-Peach-Specular.usdz in Resources */,
 				F6BD5B742761C98800C2B604 /* jazz13.mp3 in Resources */,
+				4C30360727645F0400683B75 /* Dodeca-Peach-Specular.usdz in Resources */,
+				4C30367927645F3E00683B75 /* Saturn.usdz in Resources */,
+				4C30365C27645F2800683B75 /* Items_Donut_01.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -822,7 +1178,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = QF63X87GTF;
+				DEVELOPMENT_TEAM = WSQDUZ2WWX;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/FallMusic",
@@ -861,7 +1217,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = QF63X87GTF;
+				DEVELOPMENT_TEAM = WSQDUZ2WWX;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/FallMusic",

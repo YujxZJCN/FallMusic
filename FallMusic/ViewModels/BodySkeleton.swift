@@ -216,8 +216,7 @@ public class BodySkeleton: Entity {
             return
         }
         currentEntityCount += 100
-        
-//        for _ in 1...2 {
+
         let linearVelocity = SIMD3<Float>(Float.random(in: -0.5..<0.5), Float.random(in: 1.0..<2.0), Float.random(in: -0.5..<0.5))
         let angularVelocity = SIMD3<Float>(0.2, 0, 0)
             
@@ -225,17 +224,6 @@ public class BodySkeleton: Entity {
         let anchorEntity = AnchorEntity(world: worldPosition)
         anchorEntity.addChild(model)
         arView.scene.addAnchor(anchorEntity)
-            
-//            effectEntities.append(EffectEntity(anchor: anchorEntity, attachedTime: Int(Date().timeIntervalSince1970), lifeTime: 1.0))
-//        }
-//        for _ in 1...3 {
-//            let model = generateEntityWithTransition("Grass_A_01.usdz")
-//            let anchorEntity = AnchorEntity(world: worldPosition)
-//            anchorEntity.addChild(model)
-//            arView.scene.addAnchor(anchorEntity)
-//
-//            effectEntities.append(EffectEntity(anchor: anchorEntity, attachedTime: Int(Date().timeIntervalSince1970), lifeTime: 1.0))
-//        }
     }
     
     // MARK: Trigger Effect
@@ -246,11 +234,6 @@ public class BodySkeleton: Entity {
         }
         currentEntityCount += 100
         
-//        for _ in 1...2 {
-//            let linearVelocity = SIMD3<Float>(Float.random(in: -1..<1), Float.random(in: 2..<5), Float.random(in: -1..<1))
-//            let angularVelocity = SIMD3<Float>(0, 1, 0)
-            
-//        let model = generateEntityWithPhysics("Flower_A_6.usdz", linearVelocity: linearVelocity, angularVelocity: angularVelocity)
         let loadedModel = try!ModelEntity.load(named: name)
         let model = loadedModel.children[0].children[0]
         let modelEntity = ModelEntity()
@@ -259,17 +242,6 @@ public class BodySkeleton: Entity {
         let anchorEntity = AnchorEntity(world: worldPosition)
         anchorEntity.addChild(model)
         arView.scene.addAnchor(anchorEntity)
-            
-//            effectEntities.append(EffectEntity(anchor: anchorEntity, attachedTime: Int(Date().timeIntervalSince1970), lifeTime: 1.0))
-//        }
-//        for _ in 1...3 {
-//            let model = generateEntityWithTransition("Grass_A_01.usdz")
-//            let anchorEntity = AnchorEntity(world: worldPosition)
-//            anchorEntity.addChild(model)
-//            arView.scene.addAnchor(anchorEntity)
-//
-//            effectEntities.append(EffectEntity(anchor: anchorEntity, attachedTime: Int(Date().timeIntervalSince1970), lifeTime: 1.0))
-//        }
     }
     
     func generateEntityWithPhysics(_ filename: String, linearVelocity: SIMD3<Float>, angularVelocity: SIMD3<Float>) -> ModelEntity {

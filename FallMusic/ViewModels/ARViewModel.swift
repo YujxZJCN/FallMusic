@@ -24,10 +24,78 @@ var musicProgress = 0.0
 var audioViewModel: AudioViewModel = AudioViewModel("china1", withExtension: "mp3")
 
 let allModels = [
-    "Plant": ["Plant_F_01", "Plant_F_02", "Plant_F_03"],
-    "Cloud": ["Cloud_A_1",  "Cloud_A_2",  "Cloud_A_3" ],
-    "Flower": ["Flower_A_6", "Flower_A_7", "Flower_A_8"],
-    "Grass": ["Grass_A_01", "Grass_A_02", "Grass_A_03"]
+    "plant": ["Plant_F_01", "Plant_F_02", "Plant_F_03"],
+    "cloud": ["Cloud_A_1",  "Cloud_A_2",  "Cloud_A_3" ],
+    "flower": ["Flower_A_6", "Flower_A_7", "Flower_A_8"],
+    "grass": ["Grass_A_01", "Grass_A_02", "Grass_A_03"],
+    "gem": [
+        "Diamond-Blue-Specular", "Diamond-Cyan-Specular", "Diamond-Green-Specular",
+        "Diamond-Peach-Specular", "Diamond-Pink-Specular", "Diamond-Yellow-Specular",
+        "Dodeca-Blue-Specular", "Dodeca-Cyan-Specular", "Dodeca-Green-Specular",
+        "Dodeca-Peach-Specular", "Dodeca-Pink-Specular", "Dodeca-Yellow-Specular",
+        "Icosa-Blue-Specular", "Icosa-Cyan-Specular", "Icosa-Green-Specular",
+        "Icosa-Peach-Specular", "Icosa-Pink-Specular", "Icosa-Yellow-Specular",
+        "Octa-01-Blue-Specular", "Octa-01-Cyan-Specular", "Octa-01-Green-Specular",
+        "Octa-01-Peach-Specular", "Octa-01-Pink-Specular", "Octa-01-Yellow-Specular",
+        "Octa-02-Blue-Specular", "Octa-02-Cyan-Specular", "Octa-02-Green-Specular",
+        "Octa-02-Peach-Specular", "Octa-02-Pink-Specular", "Octa-02-Yellow-Specular",
+        "Radiant-Blue-Specular", "Radiant-Cyan-Specular", "Radiant-Green-Specular",
+        "Radiant-Peach-Specular", "Radiant-Pink-Specular", "Radiant-Yellow-Specular"
+    ],
+    "item": [
+        "Items_EnergyCan_01",
+        "Items_Coin_02",
+        "Items_Banana_01",
+        "Items_Burger_01",
+        "Items_CoffeeCup_02",
+        "Items_Wrench_01",
+        "Items_Beer_01",
+        "Items_Donut_01",
+        "Items_Hammer_01",
+        "Items_IceBlock_03",
+        "Items_Plunger_01",
+        "Items_Cash_01",
+        "Items_ChocolateBar_02",
+        "Items_MilkCarton_02",
+        "Items_HotDog_01",
+        "Items_FryPan_02",
+        "Items_Apple_01",
+        "Items_SmartPhone_08",
+        "Items_Donut_03",
+        "Items_FryPan_01",
+        "Items_Taco_01",
+        "Items_Cookie_01",
+        "Items_Cash_02",
+        "Items_IceBlock_01",
+        "Items_Spatula_01",
+        "Items_Cash_03",
+        "Items_Donut_02",
+        "Items_SodaCan_03",
+        "Items_Sandwich_01",
+        "Items_WalkieTalkie_02",
+        "Items_CupCake_03",
+        "Items_PopCorn_01",
+        "Items_SmartPhone_01",
+        "Items_Spanner_01",
+        "Items_Cake_01",
+        "Items_PlasticCoffeeCup_02",
+        "Items_Coin_01",
+        "Items_StrawCup_02"
+    ],
+    "planet": [
+        "Earth", "Jupiter", "Mars", "Mercury", "Moon",
+        "Neptune", "Pluto", "Saturn", "Sun"
+    ]
+]
+
+let modelScaleAndTranslation = [
+    "plant":   [SIMD3<Float>(x: 0.005, y: 0.005, z: 0.005), SIMD3<Float>(x: 0, y: 0, z: 0)],
+    "cloud":   [SIMD3<Float>(x: 0.001, y: 0.001, z: 0.001), SIMD3<Float>(x: 0, y: 0, z: 0.01)],
+    "flower":  [SIMD3<Float>(x: 0.005, y: 0.005, z: 0.005), SIMD3<Float>(x: 0, y: 0, z: 0)],
+    "grass":   [SIMD3<Float>(x: 0.003, y: 0.003, z: 0.003), SIMD3<Float>(x: 0, y: 0, z: 0)],
+    "gem":     [SIMD3<Float>(x: 0.002, y: 0.002, z: 0.002), SIMD3<Float>(x: 0, y: 0, z: 0.001)],
+    "item":    [SIMD3<Float>(x: 0.003, y: 0.003, z: 0.003), SIMD3<Float>(x: 0, y: 0, z: 0)],
+    "planet":  [SIMD3<Float>(x: 0.01, y: 0.01, z: 0.01), SIMD3<Float>(x: 0, y: 0, z: 0)]
 ]
 
 class AREntity: Entity, HasCollision, HasModel {
@@ -104,10 +172,10 @@ class ARViewModel: ObservableObject {
         config.planeDetection = [.horizontal, .vertical]
         config.environmentTexturing = .automatic
         
-        if ARWorldTrackingConfiguration.supportsSceneReconstruction(.meshWithClassification) {
-            config.sceneReconstruction = .meshWithClassification
-            print("<ARWorldTrackingConfiguration> meshWithClassification")
-        }
+//        if ARWorldTrackingConfiguration.supportsSceneReconstruction(.meshWithClassification) {
+//            config.sceneReconstruction = .meshWithClassification
+//            print("<ARWorldTrackingConfiguration> meshWithClassification")
+//        }
         if ARWorldTrackingConfiguration.supportsSceneReconstruction(.mesh) {
             config.sceneReconstruction = .mesh
             print("<ARWorldTrackingConfiguration> mesh")
@@ -116,10 +184,10 @@ class ARViewModel: ObservableObject {
             config.frameSemantics.insert(.personSegmentationWithDepth)
             print("<ARWorldTrackingConfiguration> personSegmentationWithDepth")
         }
-        if ARWorldTrackingConfiguration.supportsFrameSemantics(.personSegmentation) {
-            config.frameSemantics.insert(.personSegmentation)
-            print("<ARWorldTrackingConfiguration> personSegmentation")
-        }
+//        if ARWorldTrackingConfiguration.supportsFrameSemantics(.personSegmentation) {
+//            config.frameSemantics.insert(.personSegmentation)
+//            print("<ARWorldTrackingConfiguration> personSegmentation")
+//        }
         // Error: 'This set of frame semantics is not supported on this configuration'
 //        if ARWorldTrackingConfiguration.supportsFrameSemantics(.bodyDetection) {
 //            config.frameSemantics.insert(.bodyDetection)
@@ -130,8 +198,6 @@ class ARViewModel: ObservableObject {
         if ARWorldTrackingConfiguration.supportsFrameSemantics(.sceneDepth) {
             config.frameSemantics.insert(.sceneDepth)
         }
-        
-        print(config.frameSemantics)
         arView.session.run(config)
                 
         // MARK: Debug Options
@@ -156,14 +222,18 @@ class ARViewModel: ObservableObject {
         if let result = results.first {
 //            print("DEBUG: Raycast results[0]: \(result.worldTransform)")
             if (currentModelName != nil) {
-                let filename = allModels[currentModelName!]![Int.random(in: 0...2)] + ".usdz"
+                let modelCount = allModels[currentModelName!]!.count
+                let filename = allModels[currentModelName!]![Int.random(in: 0...modelCount-1)] + ".usdz"
 //                print("DEBUG: load filename \(filename)")
                 
                 let loadedModel = try!ModelEntity.load(named: filename)
                 let model = loadedModel.children[0].children[0]
                 let modelEntity = ModelEntity()
                 modelEntity.addChild(model)
-                model.setScale([0.001, 0.001, 0.001], relativeTo: .none)
+                let modelScale = modelScaleAndTranslation[currentModelName!]![0]
+                let modelTranslation = modelScaleAndTranslation[currentModelName!]![1]
+                model.setScale(modelScale, relativeTo: .none)
+                model.setPosition(modelTranslation, relativeTo: .none)
                 modelEntity.generateCollisionShapes(recursive: true)
                 
 //                let modelPhysicsEntity = modelEntity as (Entity & HasPhysics)

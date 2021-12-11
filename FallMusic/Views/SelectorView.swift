@@ -24,7 +24,7 @@ struct SelectorView: View {
                         self.confirmedModel = self.modelNames[index]
                     }, label: {
                         VStack(){
-                            Image("\(self.modelNames[index])_pic")
+                            Image("\(self.modelNames[index])")
                                 .resizable()
                                 .scaledToFill()
                                 .frame(width: 120, height: 120, alignment: .center)

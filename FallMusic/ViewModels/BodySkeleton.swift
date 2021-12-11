@@ -8,10 +8,40 @@
 import Foundation
 import ARKit
 import RealityKit
+import SwiftUI
 
 public var bodySkeleton: BodySkeleton?
 public var bodySkeletonAnchor = AnchorEntity()
 public var peakSet: Set<Float> = Set<Float>()
+
+let audioFactory = AudioFactory()
+
+public class AudioFactory {
+    var players: [AVAudioPlayer] = []
+    
+    init() {
+        let soundUrl = Bundle.main.path(forResource: "dingsound", ofType: "wav")
+        for _ in 1...20 {
+            let soundEffectPlayer = try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: soundUrl!))
+            soundEffectPlayer.prepareToPlay()
+            soundEffectPlayer.volume = 1.0
+            players.append(
+                soundEffectPlayer
+            )
+        }
+    }
+    
+    func play() {
+        for player in players {
+            if !player.isPlaying {
+                print("<Fac> Play Success")
+                player.play()
+                return
+            }
+        }
+        print("<Fac> Play Failed")
+    }
+}
 
 public struct EffectEntity {
     var anchor: AnchorEntity
@@ -32,39 +62,45 @@ public struct EffectEntity {
 
 public struct JointInfo {
     var lastPosition: SIMD3<Float>
-    var lastTimeStamp: Int
+    var lastTimeStamp: Double
     var velocity: Float
     var accleration: Float
     
     mutating func update(position: SIMD3<Float>) -> Bool {
-        let timeStamp = Int(Date().timeIntervalSince1970)
-        if timeStamp - lastTimeStamp > 0 {
+        let timeStamp = Date().timeIntervalSince1970
+        if timeStamp - lastTimeStamp > 0.0 {
+            print("<RATE> Time: \(timeStamp), frame: \(timeStamp - lastTimeStamp)")
             let currentVelocity = simd_distance(position, lastPosition) / Float(timeStamp - lastTimeStamp)
             let currentAcceleration = (currentVelocity - velocity) / Float(timeStamp - lastTimeStamp)
             
-            print("currentAcceleration: \(currentAcceleration)")
-            if accleration < -0.2 {
+            lastTimeStamp = timeStamp
+            lastPosition = position
+            print("<ACC> currentAcceleration: \(currentAcceleration)")
+            print("<V> currentVelocity: \(currentVelocity)")
+            if abs(currentVelocity) > 1.0 {
                 print("===== Want to trigger Effect ======")
                 // get Audio Progress and Peak from global
                 if isOnBeat() {
+                    accleration = currentAcceleration
+                    velocity = currentVelocity
                     // Trigger Effect
                     print("Trigger Effect")
                     return true
                 } else {
+                    accleration = currentAcceleration
+                    velocity = currentVelocity
                     return false
                 }
             }
             accleration = currentAcceleration
             velocity = currentVelocity
         }
-        lastTimeStamp = timeStamp
-        lastPosition = position
         return false
     }
     
     func isOnBeat() -> Bool {
         for p in peakSet {
-            if abs(musicProgress - Double(p)) < 0.5 {
+            if abs(musicProgress - Double(p)) < 0.05 {
                 return true
             }
         }
@@ -91,6 +127,11 @@ public class BodySkeleton: Entity {
             peakSet.insert(i.position)
         }
         
+        
+//        let soundUrl = Bundle.main.path(forResource: "dingsound", ofType: "wav")
+//        soundEffectPlayer = try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: soundUrl!))
+//        soundEffectPlayer.prepareToPlay()
+//        soundEffectPlayer.volume = 1.0
         
 //        // MARK: Traverse Joints
 //        // create entity for each joint in skeleton
@@ -141,8 +182,21 @@ public class BodySkeleton: Entity {
         return modelEntity
     }
     
+    func isOnBeat() -> Bool {
+        for p in peakSet {
+            if abs(musicProgress - Double(p)) < 0.05 {
+                return true
+            }
+        }
+        return false
+    }
+    
     func update(with bodyAnchor: ARBodyAnchor) {
         let rootPosition = simd_make_float3(bodyAnchor.transform.columns.3)
+        
+        if isOnBeat() {
+            print("<BEAT> is On Beat \(musicProgress)")
+        }
         
         for jointName in ARSkeletonDefinition.defaultBody3D.jointNames {
             if let jointTransform = bodyAnchor.skeleton.modelTransform(for: ARSkeleton.JointName(rawValue: jointName)) {
@@ -154,13 +208,14 @@ public class BodySkeleton: Entity {
                 // MARK: Update Joint Infos
                 if jointName == "left_hand_joint" || jointName == "right_hand_joint" {
                     if jointInfos[jointName] == nil {
-                        jointInfos[jointName] = JointInfo(lastPosition: jointPosition, lastTimeStamp: Int(Date().timeIntervalSince1970), velocity: 0, accleration: 0)
+                        jointInfos[jointName] = JointInfo(lastPosition: jointPosition, lastTimeStamp: Date().timeIntervalSince1970, velocity: 0, accleration: 0)
                     } else {
 //                        print("jointInfo \(jointInfos[jointName]!.accleration)")
                         if jointInfos[jointName]!.update(position: jointPosition) {
                             print("<EFFECT> trigger effect for: \(jointName)")
                             let modelName = allModels["gem"]![Int.random(in: 0...allModels["gem"]!.count - 1)]
-                            triggerPhysicalEffect(at: jointPosition, name: modelName)
+                            let modelScale = modelScaleAndTranslation["gem"]![0]
+                            triggerPhysicalEffect(at: jointPosition, scale: modelScale, name: modelName)
                         }
                     }
                 }
@@ -168,10 +223,11 @@ public class BodySkeleton: Entity {
                 if jointName == "left_foot_joint" || jointName == "right_foot_joint" {
                     if jointInfos[jointName] == nil {
                         if !audioPlayer.isPlaying {
+                            audioPlayer.volume = 0.2
                             audioPlayer.play()
                             globalTimer.fire()
                         }
-                        jointInfos[jointName] = JointInfo(lastPosition: jointPosition, lastTimeStamp: Int(Date().timeIntervalSince1970), velocity: 0, accleration: 0)
+                        jointInfos[jointName] = JointInfo(lastPosition: jointPosition, lastTimeStamp: Date().timeIntervalSince1970, velocity: 0, accleration: 0)
                     } else {
 //                        print("jointInfo \(jointInfos[jointName]!.accleration)")
                         if jointInfos[jointName]!.update(position: jointPosition) {
@@ -211,20 +267,25 @@ public class BodySkeleton: Entity {
 //    @objc func updateLock() {
 //        lock = false
 //    }
-    func triggerPhysicalEffect(at worldPosition: SIMD3<Float>, name: String) {
+    func triggerPhysicalEffect(at worldPosition: SIMD3<Float>, scale: SIMD3<Float>, name: String) {
         if currentEntityCount > maxEntityCount {
             currentEntityCount -= 1
             return
         }
         currentEntityCount += 100
-
-        let linearVelocity = SIMD3<Float>(Float.random(in: -0.5..<0.5), Float.random(in: 1.0..<2.0), Float.random(in: -0.5..<0.5))
-        let angularVelocity = SIMD3<Float>(0.2, 0, 0)
-            
-        let model = generateEntityWithPhysics(name, linearVelocity: linearVelocity, angularVelocity: angularVelocity)
-        let anchorEntity = AnchorEntity(world: worldPosition)
-        anchorEntity.addChild(model)
-        arView.scene.addAnchor(anchorEntity)
+        
+        for _ in 1...4 {
+            let linearVelocity = SIMD3<Float>(Float.random(in: -0.5..<0.5), Float.random(in: 1.0..<2.0), Float.random(in: -0.5..<0.5))
+            let angularVelocity = SIMD3<Float>(0.2, 0, 0)
+                
+            let model = generateEntityWithPhysics(name, scale: scale, linearVelocity: linearVelocity, angularVelocity: angularVelocity)
+            let anchorEntity = AnchorEntity(world: worldPosition)
+            anchorEntity.addChild(model)
+            arView.scene.addAnchor(anchorEntity)
+        }
+        
+//        soundEffectPlayer.play()
+        audioFactory.play()
     }
     
     // MARK: Trigger Effect
@@ -245,12 +306,12 @@ public class BodySkeleton: Entity {
         arView.scene.addAnchor(anchorEntity)
     }
     
-    func generateEntityWithPhysics(_ filename: String, linearVelocity: SIMD3<Float>, angularVelocity: SIMD3<Float>) -> ModelEntity {
+    func generateEntityWithPhysics(_ filename: String, scale: SIMD3<Float>, linearVelocity: SIMD3<Float>, angularVelocity: SIMD3<Float>) -> ModelEntity {
         let loadedModel = try!ModelEntity.load(named: filename)
-        let model = loadedModel.children[0].children[0]
+        let model = loadedModel.children[0].children[0].children[0]
         let modelEntity = ModelEntity()
         modelEntity.addChild(model)
-        model.setScale([0.005, 0.005, 0.005], relativeTo: .none)
+        model.setScale(scale, relativeTo: .none)
         
         model.setOrientation(simd_quaternion(90.0, [1.0, 0, 0]).normalized, relativeTo: .none)
         modelEntity.generateCollisionShapes(recursive: true)

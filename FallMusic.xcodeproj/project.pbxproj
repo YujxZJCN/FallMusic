@@ -90,6 +90,7 @@
 		4C30367B27645F3E00683B75 /* Sun.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C30367227645F3E00683B75 /* Sun.usdz */; };
 		4C30367C27645F3E00683B75 /* Jupiter.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C30367327645F3E00683B75 /* Jupiter.usdz */; };
 		4C30367D27645F3E00683B75 /* Pluto.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4C30367427645F3E00683B75 /* Pluto.usdz */; };
+		4C30367F2764E6FA00683B75 /* dingsound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4C30367E2764E6FA00683B75 /* dingsound.wav */; };
 		76E8628DF7439524861DA1CA /* Pods_FallMusic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DF4C19ADA1025DF7FDEF559 /* Pods_FallMusic.framework */; };
 		F608CA2A270B37BD002B7FDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F608CA29270B37BD002B7FDA /* AppDelegate.swift */; };
 		F608CA2C270B37BD002B7FDA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F608CA2B270B37BD002B7FDA /* SceneDelegate.swift */; };
@@ -276,6 +277,7 @@
 		4C30367227645F3E00683B75 /* Sun.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Sun.usdz; sourceTree = "<group>"; };
 		4C30367327645F3E00683B75 /* Jupiter.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Jupiter.usdz; sourceTree = "<group>"; };
 		4C30367427645F3E00683B75 /* Pluto.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Pluto.usdz; sourceTree = "<group>"; };
+		4C30367E2764E6FA00683B75 /* dingsound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dingsound.wav; sourceTree = "<group>"; };
 		6DF4C19ADA1025DF7FDEF559 /* Pods_FallMusic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FallMusic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AABC419A0756B492E61C1F03 /* Pods-FallMusic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FallMusic.release.xcconfig"; path = "Target Support Files/Pods-FallMusic/Pods-FallMusic.release.xcconfig"; sourceTree = "<group>"; };
 		F608CA26270B37BD002B7FDA /* FallMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FallMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -582,6 +584,7 @@
 		F6622A8B272576A100F587D5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4C30367E2764E6FA00683B75 /* dingsound.wav */,
 				F6BD5B3B2761C98500C2B604 /* china */,
 				F6BD5B512761C98800C2B604 /* country */,
 				F6BD5B422761C98600C2B604 /* jazz */,
@@ -916,6 +919,7 @@
 				4C3035FD27645F0400683B75 /* Radiant-Yellow-Specular.usdz in Resources */,
 				F6BD5B792761C98800C2B604 /* jazz6.mp3 in Resources */,
 				F6BD5B802761C98800C2B604 /* country7.mp3 in Resources */,
+				4C30367F2764E6FA00683B75 /* dingsound.wav in Resources */,
 				4C30366427645F2800683B75 /* Items_SmartPhone_01.usdz in Resources */,
 				4C30367D27645F3E00683B75 /* Pluto.usdz in Resources */,
 				4C30365827645F2800683B75 /* Items_IceBlock_03.usdz in Resources */,

@@ -1216,7 +1216,7 @@
         <image name="playground_unselect" width="25" height="29.5"/>
         <image name="rock" width="5184" height="3456"/>
         <image name="scan" width="56" height="54"/>
-        <image name="scanGIF" width="153" height="299"/>
+        <image name="scanGIF" width="238" height="472"/>
         <image name="search" width="92" height="83"/>
         <image name="setting" width="60" height="64"/>
         <image name="star" width="56" height="53"/>

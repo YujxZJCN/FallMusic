@@ -16,7 +16,7 @@ struct ContentView : View {
     @State private var clearCurrentModel: Bool = false
     
     var modelNames: [String] = [
-        "Plant", "Cloud", "Flower", "Grass"
+        "plant", "cloud", "flower", "grass", "item", "gem", "planet"
     ]
 //
 //    init() {

@@ -77,14 +77,14 @@ public struct JointInfo {
             lastPosition = position
             print("<ACC> currentAcceleration: \(currentAcceleration)")
             print("<V> currentVelocity: \(currentVelocity)")
-            if abs(currentVelocity) > 1.0 {
-                print("===== Want to trigger Effect ======")
+            if abs(currentVelocity) > 4.0 {
+//                print("===== Want to trigger Effect ======")
                 // get Audio Progress and Peak from global
                 if isOnBeat() {
                     accleration = currentAcceleration
                     velocity = currentVelocity
                     // Trigger Effect
-                    print("Trigger Effect")
+//                    print("Trigger Effect")
                     return true
                 } else {
                     accleration = currentAcceleration
@@ -259,8 +259,7 @@ public class BodySkeleton: Entity {
         }
     }
     
-    var maxEntityCount: Int = 1000
-    var currentEntityCount: Int = 0
+    var lastTriggered = 0.0
 //    var lock = false
 //    var lockTimer: Timer!
 //
@@ -268,11 +267,10 @@ public class BodySkeleton: Entity {
 //        lock = false
 //    }
     func triggerPhysicalEffect(at worldPosition: SIMD3<Float>, scale: SIMD3<Float>, name: String) {
-        if currentEntityCount > maxEntityCount {
-            currentEntityCount -= 1
+        if musicProgress - lastTriggered < 0.5 {
             return
         }
-        currentEntityCount += 100
+        lastTriggered = musicProgress
         
         for _ in 1...4 {
             let linearVelocity = SIMD3<Float>(Float.random(in: -0.5..<0.5), Float.random(in: 1.0..<2.0), Float.random(in: -0.5..<0.5))
@@ -290,11 +288,10 @@ public class BodySkeleton: Entity {
     
     // MARK: Trigger Effect
     func triggerEffect(at worldPosition: SIMD3<Float>, name: String) {
-        if currentEntityCount > maxEntityCount {
-            currentEntityCount -= 1
+        if musicProgress - lastTriggered < 0.5 {
             return
         }
-        currentEntityCount += 100
+        lastTriggered = musicProgress
         
         let loadedModel = try!ModelEntity.load(named: name)
         let model = loadedModel.children[0].children[0]

@@ -17,6 +17,9 @@ var peaks: [Peak] = []
 class CameraViewController: UIViewController {
     @IBOutlet var musicStyleView: UIView!
     
+    @IBAction func dismissButtonTapped(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
     @IBOutlet var styleButtons: [UIButton]! {
         didSet {
             for btn in styleButtons {
@@ -303,7 +306,7 @@ class CameraViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timerEvent), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 10.0, target: self, selector: #selector(timerEvent), userInfo: nil, repeats: true)
     }
     
     @objc func timerEvent() {

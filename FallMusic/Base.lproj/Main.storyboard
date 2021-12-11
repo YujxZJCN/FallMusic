@@ -1064,7 +1064,7 @@
                                                             <constraint firstItem="dGi-JR-Qr6" firstAttribute="leading" secondItem="DDc-ps-itc" secondAttribute="leading" id="xYt-3y-9Tc"/>
                                                         </constraints>
                                                     </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="中国" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4z1-pm-LzV">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="国风" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4z1-pm-LzV">
                                                         <rect key="frame" x="24" y="85" width="29" height="17"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1123,14 +1123,29 @@
                                     <constraint firstAttribute="trailing" secondItem="j8W-hK-hCA" secondAttribute="trailing" constant="17" id="l6u-Jt-jdh"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wLj-99-yp0">
+                                <rect key="frame" x="20" y="44" width="37" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="GmQ-QW-zsn"/>
+                                    <constraint firstAttribute="width" constant="37" id="Rlt-az-xlm"/>
+                                </constraints>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.46999999999999997" colorSpace="calibratedRGB"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="back"/>
+                                <connections>
+                                    <action selector="dismissButtonTapped:" destination="EDv-n1-Kwg" eventType="touchUpInside" id="m4R-iY-Z3y"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1QP-u6-hgM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="rX8-G7-XdL" firstAttribute="trailing" secondItem="1QP-u6-hgM" secondAttribute="trailing" id="3V2-rW-0I8"/>
                             <constraint firstAttribute="bottom" secondItem="rX8-G7-XdL" secondAttribute="bottom" id="3hZ-4e-bjm"/>
+                            <constraint firstItem="wLj-99-yp0" firstAttribute="leading" secondItem="1QP-u6-hgM" secondAttribute="leading" constant="20" id="Ije-NQ-dNn"/>
                             <constraint firstAttribute="bottom" secondItem="4OM-5M-Yhq" secondAttribute="bottom" id="Zdh-NX-bC8"/>
                             <constraint firstItem="4OM-5M-Yhq" firstAttribute="leading" secondItem="1QP-u6-hgM" secondAttribute="leading" id="bar-oE-QHE"/>
+                            <constraint firstItem="wLj-99-yp0" firstAttribute="top" secondItem="1QP-u6-hgM" secondAttribute="top" id="nmH-4u-FMw"/>
                             <constraint firstItem="rX8-G7-XdL" firstAttribute="leading" secondItem="1QP-u6-hgM" secondAttribute="leading" id="pKk-7W-e8o"/>
                             <constraint firstItem="4OM-5M-Yhq" firstAttribute="trailing" secondItem="1QP-u6-hgM" secondAttribute="trailing" id="qiw-fL-FwU"/>
                             <constraint firstItem="4OM-5M-Yhq" firstAttribute="top" secondItem="lxZ-Oz-23u" secondAttribute="top" id="wJI-sT-QhA"/>
@@ -1154,6 +1169,7 @@
     <resources>
         <image name="account" width="56" height="59"/>
         <image name="advice" width="60" height="64"/>
+        <image name="back" width="200" height="200"/>
         <image name="camera" width="1024" height="899"/>
         <image name="cart" width="60" height="60"/>
         <image name="country" width="5906" height="3937"/>

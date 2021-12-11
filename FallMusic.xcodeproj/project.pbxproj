@@ -829,6 +829,11 @@
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FallMusic/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MuseFall;
+				INFOPLIST_KEY_NSCameraUsageDescription = "相机使用权限";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "麦克风使用权限";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "相册使用权限";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "相册使用权限";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -863,6 +868,11 @@
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FallMusic/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MuseFall;
+				INFOPLIST_KEY_NSCameraUsageDescription = "相机使用权限";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "麦克风使用权限";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "相册使用权限";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "相册使用权限";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

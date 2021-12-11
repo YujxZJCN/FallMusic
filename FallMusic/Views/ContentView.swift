@@ -9,6 +9,7 @@ import SwiftUI
 import RealityKit
 
 struct ContentView : View {
+    var dismissAction: (() -> Void)
     @StateObject var arViewModel = ARViewModel()
     @State private var isPlacementEnable: Bool = false
     @State private var selectedModel: String?
@@ -34,18 +35,9 @@ struct ContentView : View {
                     if self.isPlacementEnable {
                         PlacementButtonView(isPlacementEnable: self.$isPlacementEnable, selectedModel: self.$selectedModel, confirmedModel: self.$confirmModel, clearCurrentModel: self.$clearCurrentModel)
                     } else {
-                        SelectorView(modelNames: self.modelNames, isPlacementEnable: self.$isPlacementEnable, confirmedModel: self.$confirmModel)
+                        SelectorView(dismissAction: self.dismissAction, modelNames: self.modelNames, isPlacementEnable: self.$isPlacementEnable, confirmedModel: self.$confirmModel)
                     }
                 }
             )
     }
-
 }
-
-#if DEBUG
-struct ContentView_Previews : PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
-#endif

@@ -106,12 +106,15 @@ class CameraViewController: UIViewController {
         desURL = path!
         peaks = self.getPeaks(file: path!)
         DispatchQueue.main.async {
-            let contentView = ContentView()
+            let contentView = ContentView(dismissAction: {self.dismiss( animated: true, completion: {
+                self.dismiss( animated: true, completion: nil)
+            } )})
             let SwiftUIVC = UIHostingController(rootView: contentView)
             SwiftUIVC.modalPresentationStyle = .fullScreen
             self.present(SwiftUIVC, animated: true, completion: nil)
         }
     }
+    
     
     @objc func getMusicProcess() {
         self.requestMusicProcess()
@@ -141,7 +144,7 @@ class CameraViewController: UIViewController {
                                         desURL = destinationUrl!.path
                                         peaks = self.getPeaks(file: destinationUrl!.relativeString.replace(target: "file://", withString: ""))
                                         DispatchQueue.main.async {
-                                            let contentView = ContentView()
+                                            let contentView = ContentView(dismissAction: {self.dismiss( animated: true, completion: nil )})
                                             let SwiftUIVC = UIHostingController(rootView: contentView)
                                             SwiftUIVC.modalPresentationStyle = .fullScreen
                                             self.present(SwiftUIVC, animated: true, completion: nil)

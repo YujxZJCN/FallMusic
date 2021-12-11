@@ -1193,7 +1193,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = QF63X87GTF;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1202,7 +1202,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FallMusic/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = MuseFall;
-				INFOPLIST_KEY_NSCameraUsageDescription = "相机使用权限";
+				INFOPLIST_KEY_NSCameraUsageDescription = "使用相机拍摄";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "麦克风使用权限";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "相册使用权限";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "相册使用权限";
@@ -1217,7 +1217,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.yujx.FallMusic;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yjx.MuseFall;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -1232,7 +1232,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = QF63X87GTF;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1241,7 +1241,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FallMusic/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = MuseFall;
-				INFOPLIST_KEY_NSCameraUsageDescription = "相机使用权限";
+				INFOPLIST_KEY_NSCameraUsageDescription = "使用相机拍摄";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "麦克风使用权限";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "相册使用权限";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "相册使用权限";
@@ -1256,7 +1256,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.yujx.FallMusic;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yjx.MuseFall;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

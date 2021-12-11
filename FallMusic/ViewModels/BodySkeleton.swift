@@ -159,7 +159,8 @@ public class BodySkeleton: Entity {
 //                        print("jointInfo \(jointInfos[jointName]!.accleration)")
                         if jointInfos[jointName]!.update(position: jointPosition) {
                             print("<EFFECT> trigger effect for: \(jointName)")
-                            triggerPhysicalEffect(at: jointPosition, name: "Flower_A_\(Int.random(in: 6...8)).usdz")
+                            let modelName = allModels["gem"]![Int.random(in: 0...allModels["gem"]!.count - 1)]
+                            triggerPhysicalEffect(at: jointPosition, name: modelName)
                         }
                     }
                 }
